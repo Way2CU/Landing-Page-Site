@@ -51,6 +51,24 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	 var desktop_gallery = new Caracal.Gallery.Slider();
+	  	desktop_gallery
+	  	.images.add('img.desktop')
+	  	.images.set_container('div.figures figure')
+	 	.images.set_visible_count(1)
+	 	.controls.set_pause_on_hover(false)
+	 	.controls.set_auto(3000);
+	 	
+
+	 var mobile_gallery = new Caracal.Gallery.Slider();
+	  	mobile_gallery
+	  	.images.add('img.mobile')
+	  	.images.set_container('div.figures div.phone')
+	 	.images.set_visible_count(1)
+	 	.controls.set_pause_on_hover(false)	 		
+	 	.controls.set_auto(3000);
+	 			
 };
 
 

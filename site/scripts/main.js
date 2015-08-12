@@ -58,7 +58,7 @@ Site.on_load = function() {
 	  	.images.set_container('div.figures figure')
 	 	.images.set_visible_count(1)
 	 	.controls.set_pause_on_hover(false)
-	 	.controls.set_auto(3000);
+	 	.controls.set_auto(4000);
 	 	
 
 	 var mobile_gallery = new Caracal.Gallery.Slider();
@@ -67,7 +67,7 @@ Site.on_load = function() {
 	  	.images.set_container('div.figures div.phone')
 	 	.images.set_visible_count(1)
 	 	.controls.set_pause_on_hover(false)	 		
-	 	.controls.set_auto(3000);
+	 	.controls.set_auto(4000);
 	 			
 };
 

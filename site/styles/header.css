@@ -133,7 +133,7 @@ header article a.phone {
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.33);
+    box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.33);
 	background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
 	background: -o-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
 	background: linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);   
@@ -153,7 +153,7 @@ header article a.phone:before {
 	background: -o-linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
 	background: linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
     z-index: -1;
-    transition:all 0.8s;
+    transition:all 0.3s;
     opacity: 0;	
 }
 
@@ -165,6 +165,7 @@ header article a.phone:hover:before {
 header article a.phone svg {
 	display: inline-block;
 	vertical-align: middle;
+	padding-right: 5px;
 	width: 38px;
 }
 
@@ -302,7 +303,7 @@ form div.controls button {
     padding-right: 40px;
     border:none;
     border-radius: 8px;
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 5px 6px rgba(111, 106, 106, 0.6);
 	background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
 	background: -o-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
 	background: linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%); 
@@ -311,9 +312,11 @@ form div.controls button {
     color: white;
     z-index: 1;
     cursor: pointer;
-  	position: relative;	   
+  	position: relative;	
+  	transition:all 0.2s;   
       	
 }
+
 form div.controls button:before {
 	content: "";
 	position: absolute;
@@ -326,10 +329,16 @@ form div.controls button:before {
 	background: -o-linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
 	background: linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
     z-index: -1;
-    transition:all 0.8s;
+    transition:all 0.3s;
     opacity: 0;	
 }
 
 form div.controls button:hover:before {
 	opacity: 1;
 }
+
+form div.controls button:active {
+    box-shadow: 0px 0px 0px black;
+}
+
+

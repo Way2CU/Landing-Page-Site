@@ -9,7 +9,25 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<h1>It works!</h1>
+			<header>
+				<div class="menu">
+					<a href="javascript:void(0)" class="logo"></a>
+					<nav>
+						<a href="javascript:void(0)"><cms:text constant="menu_advantages"/></a>
+						<a href="javascript:void(0)"><cms:text constant="menu_about"/></a>
+						<a href="javascript:void(0)"><cms:text constant="menu_gallery"/></a>
+						<a href="javascript:void(0)"><cms:text constant="menu_testimonials"/></a>
+						<a href="javascript:void(0)"><cms:text constant="menu_contact"/></a>
+					</nav>
+					<a
+						href="'tel:'.urlencode(Language::getText('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:svg file="../images/phone-circle.svg"/>
+					</a>
+				</div>
+			</header>
 		</body>
 	</html>
 </document>

@@ -1,0 +1,99 @@
+/**
+ * Header Style Sheet
+ * Way2CU Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+header {
+ 	display: block;
+ 	text-align: right;
+ 	padding:0px calc((100vw - 1200px) / 2);
+ 	background-image: url(../images/header-background-03.jpg);
+ 	background-repeat: no-repeat;
+ 	background-position: center top;
+ 	background-size: 1920px 1080px;
+ 	min-height: 1080px;
+}
+
+div.menu {
+    display: table;
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 1200px
+ }
+
+div.menu a.logo {
+	display: table-cell;
+	vertical-align: middle;
+	background-image: url(../images/logo.svg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 176px 50px;
+	width: 50%;
+}
+
+div.menu nav {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
+	width: 45%;
+}
+
+div.menu nav a {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 20px;
+	padding-right: 20px;
+	color:#33485d;
+	text-decoration: none;
+	font-size: 1.3em;
+	position: relative;
+}
+
+div.menu nav a:first-of-type {
+	padding-right: 0px;
+}
+
+div.menu nav a:before {
+	content: "";
+	position: absolute;
+	top:100%;
+	left:0px;
+	width: 0%;
+	height: 1px;
+	background-color:#00b4c0;
+	transition:all 0.3s; 
+}
+
+div.menu nav a:hover:before {
+	width: 100%;
+}
+
+div.menu nav a:first-of-type:hover:before {
+	width: calc(100% + 20px);
+}
+
+div.menu a.phone {
+	display: table-cell;
+	vertical-align: middle;
+	width: 5%;
+}
+
+div.menu a.phone svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30px;
+}
+
+div.menu a.phone svg path {
+	fill:black;
+	transition:all 0.3s;	
+}
+
+div.menu a.phone:hover svg path{
+	fill:#00b4c0;
+}

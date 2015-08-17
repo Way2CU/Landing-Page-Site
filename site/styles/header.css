@@ -77,7 +77,7 @@ div.menu_container a.phone svg {
 }
 
 div.menu_container a.phone svg path {
-	fill:black;
+	fill:#33485d;
 	transition:all 0.3s;	
 }
 
@@ -294,8 +294,39 @@ form label input:focus {
 
 form div.controls {
 	display: inline-block;
-	vertical-align: middle;
-        	
+	vertical-align: middle; 
+	position: relative;      	
+}
+
+header div.form_wrap form div.controls:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	right: 120%;
+	background-image: url(../images/arrow.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+	-webkit-transform: rotate(270deg);
+	   -moz-transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	     -o-transform: rotate(270deg);
+	        transform: rotate(270deg);
+	-webkit-animation: arrowMove 1s linear infinite alternate;        
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes arrowMove {
+    from {right: 120%; }
+    to {right:110%;}
 }
 
 form div.controls button {

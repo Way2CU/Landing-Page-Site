@@ -12,23 +12,23 @@
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
 			<header>
 				<div class="menu">
+						<div class="menu_container">
 
-					<a href="javascript:void(0)" class="logo"></a>
-					<nav>
-						<a href="javascript:void(0)"><cms:text constant="menu_advantages"/></a>
-						<a href="javascript:void(0)"><cms:text constant="menu_about"/></a>
-						<a href="javascript:void(0)"><cms:text constant="menu_gallery"/></a>
-						<a href="javascript:void(0)"><cms:text constant="menu_testimonials"/></a>
-						<a href="javascript:void(0)"><cms:text constant="menu_contact"/></a>
-					</nav>
-					<a
-						href="'tel:'.urlencode(Language::getText('phone'))"
-						cms:eval="href"
-						class="phone"
-						>
-						<cms:svg file="../images/phone-circle.svg"/>
-					</a>
-
+						<a href="javascript:void(0)" class="logo"></a>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact"
+							/>
+						<a
+							href="'tel:'.urlencode(Language::getText('phone'))"
+							cms:eval="href"
+							class="phone"
+							>
+							<cms:text constant="phone"/>
+							<cms:svg file="../images/phone-circle.svg"/>
+						</a>
+					</div>
 				</div>
 
 				<cms:module

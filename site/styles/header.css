@@ -10,91 +10,78 @@ header {
  	display: block;
  	text-align: center;
  	padding:0px calc((100vw - 1200px) / 2);
- 	background-image: url(../images/header-background-03.jpg);
+ 	background-image: url(../images/header-background.jpg);
  	background-repeat: no-repeat;
  	background-position: center top;
- 	background-size: 1920px 1080px;
- 	min-height: 1080px;
+ 	background-size: 1920px 750px;
+ 	min-height: 750px;
 }
 
 div.menu {
-    display: table;
-    text-align: right;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 1200px
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
  }
 
-div.menu a.logo {
+div.menu div.menu_container {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 1200px;
+
+} 
+
+div.menu_container a.logo {
 	display: table-cell;
 	vertical-align: middle;
 	background-image: url(../images/logo.svg);
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: 176px 50px;
-	width: 50%;
+	width: 15%;
 }
 
-div.menu nav {
+div.menu_container form {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: right;
-	width: 45%;
+	opacity: 0;
+	visibility: hidden;
+	width: 60%;
 }
 
-div.menu nav a {
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 20px;
-	padding-right: 20px;
-	color:#33485d;
-	text-decoration: none;
-	font-size: 1.3em;
-	position: relative;
-}
 
-div.menu nav a:first-of-type {
-	padding-right: 0px;
-}
-
-div.menu nav a:before {
-	content: "";
-	position: absolute;
-	top:100%;
-	left:0px;
-	width: 0%;
-	height: 1px;
-	background-color:#00b4c0;
-	transition:all 0.3s; 
-}
-
-div.menu nav a:hover:before {
-	width: 100%;
-}
-
-div.menu nav a:first-of-type:hover:before {
-	width: calc(100% + 20px);
-}
-
-div.menu a.phone {
+div.menu_container a.phone {
 	display: table-cell;
 	vertical-align: middle;
-	width: 5%;
+	text-decoration: none;
+	color:#33485d;
+	font-weight: 700;
+	font-size: 1.2em;
+	line-height: 100%;
+	width: 10%;
 }
 
-div.menu a.phone svg {
-	display: block;
+div.menu_container a.phone svg {
+	display: inline-block;
+	vertical-align: middle;
 	margin-left: auto;
 	margin-right: auto;
-	width: 30px;
+	padding-right: 5px;
+	width: 26px;
 }
 
-div.menu a.phone svg path {
+div.menu_container a.phone svg path {
 	fill:black;
 	transition:all 0.3s;	
 }
 
-div.menu a.phone:hover svg path{
+div.menu_container a.phone:hover svg path{
 	fill:#00b4c0;
 }
 
@@ -102,7 +89,7 @@ header article {
 	display: inline-block;
 	vertical-align: top;
 	text-align: right;
-	margin-top: 40px;
+	margin-top: 80px;
 	width: 50%;
 }
 
@@ -176,7 +163,7 @@ header article a.phone svg path {
 header div.figures {
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 40px;
+	margin-top: 80px;
 	background-image:url(../images/desktop-monitor.png);
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -248,6 +235,7 @@ header div.form_wrap p {
 	display: block;
 	padding-bottom: 20px;
 	font-size: 1.5em;
+	font-weight: 700;
 }
 
 form {
@@ -257,26 +245,42 @@ form {
 form label {
 	display: inline-block;
 	vertical-align: top;
+	position: relative;
 }
 
-form label span {
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 1.3em;
+form label:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-image: url(../images/form-icons-sprite.svg);
+    background-repeat: no-repeat;
+    background-position: -120px 0px;
+    background-size: 200px 50px;
+    width: 50px;
+    height: 50px;
 }
+
+form label:nth-of-type(2):before {
+    background-position: -70px 0px;
+}
+
+form label:nth-of-type(3):before {
+    background-position: -20px 0px;
+}
+
 
 form label input {
     display: inline-block;
     vertical-align: middle;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-right: 5px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 40px;
 	background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid #bcc2c6;
+    border-left: none;
     box-shadow: 0px 2px 10px rgba(126, 139, 140, 0.2);
-    width: 250px;
+    width:calc(220px - 40px);
     transition:all 0.3s;
 }
 
@@ -291,29 +295,25 @@ form label input:focus {
 form div.controls {
 	display: inline-block;
 	vertical-align: middle;
-    margin-right: 10px;
-    margin-left: 10px;	
         	
 }
 
 form div.controls button {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border:none;
-    border-radius: 8px;
-    box-shadow: 0px 5px 6px rgba(111, 106, 106, 0.6);
-	background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
-	background: -o-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
-	background: linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%); 
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
+    background: -o-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
+    background: linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
     font-size: 1.3em;
     line-height: 100%;
     color: white;
     z-index: 1;
     cursor: pointer;
-  	position: relative;	
-  	transition:all 0.2s;   
+    position: relative;
+    transition: all 0.2s;  
       	
 }
 

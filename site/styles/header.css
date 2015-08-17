@@ -19,7 +19,6 @@ header {
 
 div.menu {
     display: block;
-    position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -30,8 +29,8 @@ div.menu div.menu_container {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 1200px;
 
 } 
@@ -89,7 +88,6 @@ header article {
 	display: inline-block;
 	vertical-align: top;
 	text-align: right;
-	margin-top: 80px;
 	width: 50%;
 }
 
@@ -163,7 +161,6 @@ header article a.phone svg path {
 header div.figures {
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 80px;
 	background-image:url(../images/desktop-monitor.png);
 	background-repeat: no-repeat;
 	background-position: center top;

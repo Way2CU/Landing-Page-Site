@@ -1,9 +1,11 @@
 <document>
-	<cms:module
-		name="articles"
-		action="show_list"
-		group="$params['id']"
-		template="parts/article_features.xml"
-		cms:eval="group"
-		/>
+	<ul>
+		<cms:module
+			name="articles"
+			action="show_list"
+			group="$params['id']"
+			template="parts/article_features.xml"
+			cms:eval="group"
+			/>
+	</ul>	
 </document>

@@ -67,6 +67,22 @@
 				</div>		
 
 			</header>
+
+			<section class="about">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about"
+					template="parts/article_about.xml"
+					/>
+
+				<cms:module
+					name="articles"
+					action="show_group"
+					text_id="features"
+					template="parts/article_group.xml"
+					/>	
+			</section>
 		</body>
 	</html>
 </document>

@@ -236,63 +236,27 @@ section.about ul li:nth-of-type(3) h3:before {
 
 section.about ul li:nth-of-type(1) h3:after {
 	background-position: -400px -200px;
-    -webkit-animation: changeImage 10s infinite;   	 	
+    -webkit-animation: changeImage 20s infinite;   	 	
 }
 
 section.about ul li:nth-of-type(2) h3:after {
 	background-position: -200px -200px;	
-    -webkit-animation: changeImage 10s infinite; 	
+    -webkit-animation: changeImage 20s 8s infinite; 	
 }
 
 section.about ul li:nth-of-type(3) h3:after {
 	background-position: 0px -200px;
-    -webkit-animation: changeImage 10s infinite; 			
+    -webkit-animation: changeImage 20s 16s infinite; 			
 }
 
 @-webkit-keyframes changeImage {
-	0% {opacity:1 ;}
-	10% {opacity:1;}
-	20%{opacity:1 ;}
-	30%{opacity:0 ;}					
-	40%{opacity:0 ;}
-	50%{opacity:0 ;}
-	60%{opacity:0 ;}
-	70%{opacity:0 ;}
-	80%{opacity:0 ;}
-	90%{opacity:0 ;}
-	100%{opacity:0;}	
-
-}
-/*
-@-webkit-keyframes changeImage2 {
-	0% {opacity:0 ;}
-	10% {opacity:0 ;}
-	20%{opacity:0 ;}
-	30%{opacity:1 ;}					
-	40%{opacity:1 ;}
-	50%{opacity:1 ;}
-	60%{opacity:1 ;}
-	70%{opacity:0 ;}
-	80%{opacity:0 ;}
-	90%{opacity:0 ;}
-	100%{opacity:0 ;}	
+	0% { opacity: 0 }
+	5%, 15% { opacity: 1 }
+	15%, 20% { opacity: 0}
+	
 
 }
 
-@-webkit-keyframes changeImage3 {
-	0% {opacity:0 ;}
-	10% {opacity:0 ;}
-	20%{opacity:0 ;}
-	30%{opacity:0 ;}					
-	40%{opacity:0 ;}
-	50%{opacity:0 ;}
-	60%{opacity:0 ;}
-	70%{opacity:1 ;}
-	80%{opacity:1 ;}
-	90%{opacity:1 ;}
-	100%{opacity:1 ;}	
-
-}*/
 
   
 

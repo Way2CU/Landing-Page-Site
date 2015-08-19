@@ -1,0 +1,19 @@
+<document>
+	<div class="site">
+
+		<div class="info">
+			<h3><cms:var param="name" multilanguage="yes"/></h3>		
+			<p><cms:var param="description" multilanguage="yes"/></p>
+		</div>
+
+		
+			<cms:module
+				name="gallery"
+				action="show_image_list"
+				group_id="$params['id']"
+				template="parts/images.xml"
+				cms:eval="group_id"
+				/>
+		
+	</div>
+</document>

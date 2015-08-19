@@ -68,6 +68,13 @@ Site.on_load = function() {
 					 	.images.set_visible_count(1)
 					 	.controls.set_pause_on_hover(false)	 		
 					 	.controls.set_auto(4000);
+
+	gallery = new PageControl('div.sites_container','div.site')
+	gallery.attachPreviousControl($('a.previous'))
+	gallery.attachNextControl($('a.next'))
+	.setWrapAround(true);
+
+
 	 			
 };
 

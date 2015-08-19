@@ -63,7 +63,7 @@ section.about ul li:first-of-type:before {
     height: 15px;
     border-radius: 50%;
     background-color: #bcc2c6;
-    -webkit-animation: changeColor 4s infinite; 
+    -webkit-animation: changeCircleColor 15s 2s infinite; 
 }
 
 section.about ul li:first-of-type:after {
@@ -75,7 +75,7 @@ section.about ul li:first-of-type:after {
     height: 15px;
     border-radius: 50%;
     background-color: #bcc2c6;
-    -webkit-animation: changeColor2 4s infinite;
+    -webkit-animation: changeCircleColor 15s 3s infinite;
 }
 
 section.about ul li:nth-of-type(2):before {
@@ -87,7 +87,7 @@ section.about ul li:nth-of-type(2):before {
     height: 15px;
     border-radius: 50%;
     background-color: #bcc2c6;
-    -webkit-animation: changeColor3 4s infinite;
+    -webkit-animation: changeCircleColor 15s 4s infinite;
 }
 
 section.about ul li:nth-of-type(2):after {
@@ -99,7 +99,7 @@ section.about ul li:nth-of-type(2):after {
     height: 15px;
     border-radius: 50%;
     background-color: #bcc2c6;
-    -webkit-animation: changeColor4 10s infinite;    
+    -webkit-animation: changeCircleColor 15s 7s infinite;    
 }
 
 section.about ul li:nth-of-type(3):before {
@@ -111,7 +111,7 @@ section.about ul li:nth-of-type(3):before {
     height: 15px;
     border-radius: 50%;
     background-color: #bcc2c6;
-    -webkit-animation: changeColor6 10s infinite;      
+    -webkit-animation: changeCircleColor 15s 9s infinite;      
 }
 
 section.about ul li:nth-of-type(3):after {
@@ -123,64 +123,17 @@ section.about ul li:nth-of-type(3):after {
     height: 15px;
     border-radius: 50%;
     background-color: #bcc2c6;
-    -webkit-animation: changeColor5 4s infinite;      
-}
-/*
-@-webkit-keyframes changeColor {
-	0%{background-color: #00b4c0;}
-	20%{background-color: #bcc2c6;}
-	40%{background-color: #bcc2c6;}
-	60%{background-color: #bcc2c6;}
-	80%{background-color: #bcc2c6;}
-	100%{background-color: #bcc2c6;}
+    -webkit-animation: changeCircleColor 15s 8s infinite;      
 }
 
-@-webkit-keyframes changeColor2 {
-	0%{background-color: #bcc2c6;}
-	20%{background-color: #00b4c0;}
-	40%{background-color: #bcc2c6;}
-	60%{background-color: #bcc2c6;}
-	80%{background-color: #bcc2c6;}
-	100%{background-color: #bcc2c6;}
+@-webkit-keyframes changeCircleColor {
+	0% { background-color:#00b4c0;}
+	5% { background-color:#bcc2c6;} 
+
+	
 }
 
-@-webkit-keyframes changeColor3 {
-	0%{background-color: #bcc2c6;}
-	20%{background-color: #bcc2c6;}
-	40%{background-color: #00b4c0;}
-	60%{background-color: #bcc2c6;}
-	80%{background-color: #bcc2c6;}
-	100%{background-color: #bcc2c6;}
-}
 
-@-webkit-keyframes changeColor4 {
-	0%{background-color: #bcc2c6;}
-	20%{background-color: #bcc2c6;}
-	40%{background-color: #bcc2c6;}
-	60%{background-color: #00b4c0;}
-	80%{background-color: #bcc2c6;}
-	100%{background-color: #bcc2c6;}
-}
-
-@-webkit-keyframes changeColor5 {
-	0%{background-color: #bcc2c6;}
-	20%{background-color: #bcc2c6;}
-	40%{background-color: #bcc2c6;}
-	60%{background-color: #bcc2c6;}
-	80%{background-color: #00b4c0;}
-	100%{background-color: #bcc2c6;}
-}
-
-@-webkit-keyframes changeColor6 {
-	0%{background-color: #bcc2c6;}
-	20%{background-color: #bcc2c6;}
-	40%{background-color: #bcc2c6;}
-	60%{background-color: #bcc2c6;}
-	80%{background-color: #bcc2c6;}
-	100%{background-color: #00b4c0;}
-}      
-
-*/
 section.about ul li h3 {
 	display: block;
 	padding-bottom: 5px;
@@ -236,17 +189,17 @@ section.about ul li:nth-of-type(3) h3:before {
 
 section.about ul li:nth-of-type(1) h3:after {
 	background-position: -400px -200px;
-    -webkit-animation: changeImage 20s infinite;   	 	
+    -webkit-animation: changeImage 15s infinite;   	 	
 }
 
 section.about ul li:nth-of-type(2) h3:after {
 	background-position: -200px -200px;	
-    -webkit-animation: changeImage 20s 8s infinite; 	
+    -webkit-animation: changeImage 15s 5s infinite; 	
 }
 
 section.about ul li:nth-of-type(3) h3:after {
 	background-position: 0px -200px;
-    -webkit-animation: changeImage 20s 16s infinite; 			
+    -webkit-animation: changeImage 15s 10s infinite; 			
 }
 
 @-webkit-keyframes changeImage {
@@ -254,8 +207,164 @@ section.about ul li:nth-of-type(3) h3:after {
 	5%, 15% { opacity: 1 }
 	15%, 20% { opacity: 0}
 	
+}
+
+section.gallery {
+	display: block;
+	text-align: center;
+	padding:20px calc((100vw - 1200px) / 2);
+	background-image: url(../images/halftone.png);
+	background-repeat: repeat;
+	background-position: center center;
+	background-size: 400px 400px;
+	position: relative;
+}
+
+section.gallery h2 {
+    display: block;
+    font-weight: 400;
+    font-size: 3em;	
+}
+
+section.gallery div.controls {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    margin-left: -300px;
 
 }
+section.gallery  div.controls a {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 25px;
+	margin-right: 25px;
+	width: 150px;
+	text-decoration: none;
+	transition:all 0.3s;
+}
+
+section.gallery  div.controls a svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+	transition:all 0.3s;
+}
+
+section.gallery  div.controls svg path {
+	transition:all 0.3s;
+}
+
+section.gallery div.controls a:hover svg path {
+	fill:#00b4c0;
+}
+
+section.gallery div.controls a.active svg path {
+	fill:#00b4c0;
+}
+
+section.gallery  > a.next {
+    display: inline-block;
+    position: absolute;
+    top: 15%;
+    margin-top: -25px;
+    right: 71%;
+    width: 50px;
+    height: 50px;
+    border: 0px solid #00b4c0;
+    border-left-width: 8px;
+    border-bottom-width: 8px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 50;
+}
+
+section.gallery > a.previous {
+    display: inline-block;
+    position: absolute;
+    top: 15%;
+    margin-top: -25px;
+    left: 71%;
+    width: 50px;
+    height: 50px;
+    border: 0px solid #00b4c0;
+    border-right-width: 8px;
+    border-top-width: 8px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 50;
+}
+
+section.gallery div.sites_container  {
+	display: block;
+    padding-top: 20px;
+    position: relative;
+    min-height: 1100px;
+}
+
+section.gallery div.sites_container div.site {
+	position: absolute;
+	text-align: center;
+	top:50px;
+	left: 50%;
+	margin-left:-500px;
+	opacity: 0;
+	visibility: hidden;
+	transition:all 0.3s;
+}
+
+section.gallery div.sites_container div.site.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+section.gallery div.sites_container div.site div.info {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 160px;
+    width: 600px;
+    min-height: 140px;
+    position: relative;
+
+}
+
+section.gallery div.sites_container div.site div.info h3 {
+	display: block;
+	font-size: 1.7em;
+	color:#00b4c0;
+}
+
+section.gallery div.sites_container div.site div.info p {
+	display: block;
+	font-size: 1.3em;
+	color:#7f8c8d;
+}
+
+section.gallery div.sites_container div.site div.gallery_image {
+	display: block;
+}
+
+section.gallery div.sites_container div.site a:first-of-type {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../images/desktop-frame.svg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1000px 773px;
+	width:1000px;
+	height: 773px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+
+
+
 
 
   

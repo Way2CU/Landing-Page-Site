@@ -128,8 +128,10 @@ Site.LandingPagePreview = function(page_control) {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
+	
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
 
 	// create desktop screen shot slider in header
 	var timeout = 4000;
@@ -173,6 +175,7 @@ Site.on_load = function() {
 
 	// create landing page preview
 	Site.landing_page_preview = new Site.LandingPagePreview(Site.landing_pages_gallery);
+
 };
 
 // connect document `load` event with handler function

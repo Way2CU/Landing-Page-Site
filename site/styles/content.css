@@ -456,6 +456,8 @@ section.gallery div.sites_container.mobile div.site a:nth-of-type(3) {
 	overflow: hidden;		
 }
 
+img.loading { position: relative; top: 200px; }
+
 /*Clients Gallery*/
 
 section.clients {

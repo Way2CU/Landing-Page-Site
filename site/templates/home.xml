@@ -108,6 +108,27 @@
 				<a href="javascript:void(0)" class="next"></a>
 				<a href="javascript:void(0)" class="previous"></a>
 			</section>
+
+			<section class="clients">
+				<div class="client_gallery">
+
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="clients"
+						template="parts/client_images.xml"
+						/>
+
+				</div>
+
+				<div class="clients_gallery_controls">
+					<a href="javascript:void(0)" class="btn_previous"></a>
+					<h2><cms:text constant="clients"/></h2>
+					<a href="javascript:void(0)" class="btn_next"></a>
+				</div>
+
+
+			</section>
 		</body>
 	</html>
 </document>

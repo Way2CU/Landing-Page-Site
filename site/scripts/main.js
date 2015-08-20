@@ -68,6 +68,19 @@ Site.on_load = function() {
 					 	.images.set_visible_count(1)
 					 	.controls.set_pause_on_hover(false)	 		
 					 	.controls.set_auto(4000);
+	// Clients Gallery
+	 var client_gallery = new Caracal.Gallery.Slider();
+  	 client_gallery
+				  	.images.add('img.clients')
+				  	.images.set_container('div.client_gallery')
+				 	.images.set_visible_count(6)
+				 	.images.set_spacing(100)
+				 	.images.set_step_size(1)
+	 	            .images.set_center(true)
+            		.images.set_spacing(20)
+				 	.controls.set_pause_on_hover(false)	
+				 	.controls.attach_next('a.btn_next')
+				 	.controls.attach_previous('a.btn_previous'); 						 	
 
 	gallery = new PageControl('div.sites_container','div.site')
 	gallery.attachPreviousControl($('a.previous'))

@@ -59,14 +59,14 @@ Site.on_load = function() {
 					 	.images.set_visible_count(1)
 					 	.controls.set_pause_on_hover(false)
 					 	.controls.set_auto(4000);
-	 	
+
 
 	 var mobile_gallery = new Caracal.Gallery.Slider();
 	  	 mobile_gallery
 					  	.images.add('img.mobile')
 					  	.images.set_container('div.figures div.phone')
 					 	.images.set_visible_count(1)
-					 	.controls.set_pause_on_hover(false)	 		
+					 	.controls.set_pause_on_hover(false)
 					 	.controls.set_auto(4000);
 	// Clients Gallery
 	 var client_gallery = new Caracal.Gallery.Slider();
@@ -78,9 +78,9 @@ Site.on_load = function() {
 				 	.images.set_step_size(1)
 	 	            .images.set_center(true)
             		.images.set_spacing(20)
-				 	.controls.set_pause_on_hover(false)	
+				 	.controls.set_pause_on_hover(false)
 				 	.controls.attach_next('a.btn_next')
-				 	.controls.attach_previous('a.btn_previous'); 						 	
+				 	.controls.attach_previous('a.btn_previous');
 
 	gallery = new PageControl('div.sites_container','div.site')
 	gallery.attachPreviousControl($('a.previous'))
@@ -103,7 +103,7 @@ Site.on_load = function() {
 
 
 
-	 			
+
 };
 
 

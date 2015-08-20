@@ -132,67 +132,7 @@ Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-<<<<<<< HEAD
-	// site initialize  
-	var version_links = $('div.controls a');
-	var container = $('div.sites_container');
-	container.attr('class',"sites_container desktop");
-	$('div.controls a.desktop').addClass('active');
 
-
-	// Slider For Header desktop images
-	var desktop_gallery = new Caracal.Gallery.Slider();
-		desktop_gallery
-					.images.add('img.desktop')
-					.images.set_container('div.figures figure')
-					.images.set_visible_count(1)
-					.controls.set_pause_on_hover(false)
-					.controls.set_auto(6000);
-		
-	// Slider For Header mobile images
-	var mobile_gallery = new Caracal.Gallery.Slider();
-		mobile_gallery
-					.images.add('img.mobile')
-					.images.set_container('div.figures div.phone')
-					.images.set_visible_count(1)
-					.controls.set_pause_on_hover(false)	 		
-					.controls.set_auto(6000);
-
-	// Clients Gallery Slider Function
-	var client_gallery = new Caracal.Gallery.Slider();
-		client_gallery
-					.images.add('img.clients')
-					.images.set_container('div.client_gallery')
-					.images.set_visible_count(6)
-					.images.set_spacing(100)
-					.images.set_step_size(1)
-					.images.set_center(true)
-					.images.set_spacing(20)
-					.controls.set_pause_on_hover(false)	
-					.controls.attach_next('a.btn_next')
-					.controls.attach_previous('a.btn_previous');
-
-	// Function displaying way2cu Sites (Desktop , tablet , mobile versions)
-	var gallery = new PageControl('div.sites_container','div.site')
-		gallery
-			.attachPreviousControl($('a.previous'))
-			.attachNextControl($('a.next'))
-			.setWrapAround(true);
-
-
-	version_links.on('click',function(){
-		var item = $(this);
-		item.addClass('active');
-		version_links.not(item).removeClass('active');
-		var newClass = item.attr('class');
-		container.attr('class',"sites_container " + newClass);
-
-	});
-
-
-
-				
-=======
 	// create desktop screen shot slider in header
 	var timeout = 4000;
 	Site.desktop_screenshot_slider = new Caracal.Gallery.Slider();
@@ -235,7 +175,7 @@ Site.on_load = function() {
 
 	// create landing page preview
 	Site.landing_page_preview = new Site.LandingPagePreview(Site.landing_pages_gallery);
->>>>>>> 1f197e7af8c53eb39e5686ceaa8c43bd234e4191
+
 };
 
 // connect document `load` event with handler function

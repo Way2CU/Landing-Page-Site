@@ -129,6 +129,20 @@
 
 
 			</section>
+
+			<footer>
+				<section>
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="footer_article"
+						template="parts/article_footer.xml"
+						/>
+				</section>
+			<div class="copyright">
+				<span><cms:text constant="copyright"/></span>
+			</div>
+			</footer>
 		</body>
 	</html>
 </document>

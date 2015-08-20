@@ -1,4 +1,5 @@
 <document>
+	
 	<a href="$params['image']" cms:eval="href">
 		<img src="gallery::getThumbnailById($params['id'], null, 920, Thumbnail::CONSTRAIN_HEIGHT)" alt="" cms:eval="src"/>		
 	</a>

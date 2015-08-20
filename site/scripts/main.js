@@ -49,48 +49,56 @@ Site.is_mobile = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
+	
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	 var desktop_gallery = new Caracal.Gallery.Slider();
-	  	 desktop_gallery
-					  	.images.add('img.desktop')
-					  	.images.set_container('div.figures figure')
-					 	.images.set_visible_count(1)
-					 	.controls.set_pause_on_hover(false)
-					 	.controls.set_auto(6000);
-	 	
-
-	 var mobile_gallery = new Caracal.Gallery.Slider();
-	  	 mobile_gallery
-					  	.images.add('img.mobile')
-					  	.images.set_container('div.figures div.phone')
-					 	.images.set_visible_count(1)
-					 	.controls.set_pause_on_hover(false)	 		
-					 	.controls.set_auto(6000);
-	// Clients Gallery
-	 var client_gallery = new Caracal.Gallery.Slider();
-  	 client_gallery
-				  	.images.add('img.clients')
-				  	.images.set_container('div.client_gallery')
-				 	.images.set_visible_count(6)
-				 	.images.set_spacing(100)
-				 	.images.set_step_size(1)
-	 	            .images.set_center(true)
-            		.images.set_spacing(20)
-				 	.controls.set_pause_on_hover(false)	
-				 	.controls.attach_next('a.btn_next')
-				 	.controls.attach_previous('a.btn_previous'); 						 	
-
-	gallery = new PageControl('div.sites_container','div.site')
-	gallery.attachPreviousControl($('a.previous'))
-	gallery.attachNextControl($('a.next'))
-	.setWrapAround(true);
-
+	// site initialize  
 	var version_links = $('div.controls a');
 	var container = $('div.sites_container');
 	container.attr('class',"sites_container desktop");
 	$('div.controls a.desktop').addClass('active');
+
+
+	// Slider For Header desktop images
+	var desktop_gallery = new Caracal.Gallery.Slider();
+		desktop_gallery
+					.images.add('img.desktop')
+					.images.set_container('div.figures figure')
+					.images.set_visible_count(1)
+					.controls.set_pause_on_hover(false)
+					.controls.set_auto(6000);
+		
+	// Slider For Header mobile images
+	var mobile_gallery = new Caracal.Gallery.Slider();
+		mobile_gallery
+					.images.add('img.mobile')
+					.images.set_container('div.figures div.phone')
+					.images.set_visible_count(1)
+					.controls.set_pause_on_hover(false)	 		
+					.controls.set_auto(6000);
+
+	// Clients Gallery Slider Function
+	var client_gallery = new Caracal.Gallery.Slider();
+		client_gallery
+					.images.add('img.clients')
+					.images.set_container('div.client_gallery')
+					.images.set_visible_count(6)
+					.images.set_spacing(100)
+					.images.set_step_size(1)
+					.images.set_center(true)
+					.images.set_spacing(20)
+					.controls.set_pause_on_hover(false)	
+					.controls.attach_next('a.btn_next')
+					.controls.attach_previous('a.btn_previous');
+
+	// Function displaying way2cu Sites (Desktop , tablet , mobile versions)
+	var gallery = new PageControl('div.sites_container','div.site')
+		gallery
+			.attachPreviousControl($('a.previous'))
+			.attachNextControl($('a.next'))
+			.setWrapAround(true);
+
 
 	version_links.on('click',function(){
 		var item = $(this);
@@ -103,7 +111,7 @@ Site.on_load = function() {
 
 
 
-	 			
+				
 };
 
 

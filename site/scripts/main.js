@@ -74,6 +74,15 @@ Site.on_load = function() {
 	gallery.attachNextControl($('a.next'))
 	.setWrapAround(true);
 
+	var version_links = $('div.controls a');
+	var container = $('div.sites_container');
+	version_links.on('click',function(){
+		
+		var link = $(this);
+		var newClass = link.attr('class');
+		container.addClass(newClass);
+
+	});
 
 	 			
 };

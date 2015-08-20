@@ -189,7 +189,7 @@ header div.figures figure img {
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	transition:all 0.3s;
+	transition:all 0.8s;
 }
 
 header div.figures figure img.visible {
@@ -214,7 +214,7 @@ header div.figures div.phone img {
     top: 20px;
     right:33px !important;
 	opacity:0;
-	transition:all 0.3s;    	
+	transition:all 0.8s;    	
 }
 
 header div.figures div.phone img.visible {

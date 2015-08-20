@@ -70,7 +70,7 @@ Site.LandingPagePreview = function(page_control) {
 		// find DOM elements
 		self.container = self.page_control.container;
 		self.controls = self.container.find('div.controls a');
-		self.images = self.page_control.find('a img');
+		self.images = self.container.find('div.site a img');
 
 		// connect signals
 		self.page_control.connect('page-flip', self.handler.page_switch);
@@ -128,10 +128,8 @@ Site.LandingPagePreview = function(page_control) {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
-
 
 	// create desktop screen shot slider in header
 	var timeout = 4000;
@@ -174,7 +172,6 @@ Site.on_load = function() {
 
 	// create landing page preview
 	Site.landing_page_preview = new Site.LandingPagePreview(Site.landing_pages_gallery);
-
 };
 
 // connect document `load` event with handler function

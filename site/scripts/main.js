@@ -70,7 +70,7 @@ Site.LandingPagePreview = function(page_control) {
 		// find DOM elements
 		self.container = self.page_control.container;
 		self.controls = self.container.find('div.controls a');
-		self.images = self.page_control.find('a img');
+		self.images = self.container.find('div.site a img');
 
 		// connect signals
 		self.page_control.connect('page-flip', self.handler.page_switch);

@@ -157,14 +157,13 @@ Site.on_load = function() {
 	 Site.client_logo_slider
 		.images.set_container('div.client_gallery')
 		.images.set_visible_count(6)
-		.images.set_spacing(100)
 		.images.set_step_size(1)
 		.images.set_center(true)
 		.images.set_spacing(20)
 		.images.add('img.clients')
 		.controls.set_pause_on_hover(false)
-		.controls.attach_next('a.btn_next')
-		.controls.attach_previous('a.btn_previous');
+		.controls.attach_next('div.clients_gallery_controls a.btn_next')
+		.controls.attach_previous('div.clients_gallery_controls a.btn_previous');
 
 	// create page control for landing page preview
 	Site.landing_pages_gallery = new PageControl('div.sites_container', 'div.site');

@@ -77,21 +77,13 @@ Site.on_load = function() {
 	var version_links = $('div.controls a');
 	var container = $('div.sites_container');
 	version_links.on('click',function(){
-<<<<<<< HEAD
-		
-		var link = $(this);
-		var newClass = link.attr('class');
-		container.addClass(newClass);
-
-	});
-=======
 		var item = $(this);
 		var newClass = item.attr('class');
 		container.attr('class',"sites_container " + newClass);
 
 	});
 
->>>>>>> 97a35a4b934ecd6057575d3f11cc6811fef070c7
+
 
 	 			
 };

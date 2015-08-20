@@ -296,14 +296,28 @@ section.gallery > a.previous {
     z-index: 50;
 }
 
-section.gallery div.sites_container  {
+section.gallery div.sites_container.desktop  {
 	display: block;
     padding-top: 20px;
     position: relative;
     min-height: 1100px;
 }
 
-section.gallery div.sites_container div.site {
+section.gallery div.sites_container.tablet  {
+	display: block;
+    padding-top: 20px;
+    position: relative;
+    min-height: 1100px;
+}
+
+section.gallery div.sites_container.mobile  {
+	display: block;
+    padding-top: 20px;
+    position: relative;
+    min-height: 1100px;
+}
+
+section.gallery div.sites_container.desktop div.site {
 	position: absolute;
 	text-align: center;
 	top:50px;
@@ -311,10 +325,42 @@ section.gallery div.sites_container div.site {
 	margin-left:-500px;
 	opacity: 0;
 	visibility: hidden;
-	transition:all 0.3s;
+
 }
 
-section.gallery div.sites_container div.site.visible {
+section.gallery div.sites_container.tablet div.site {
+	position: absolute;
+	text-align: center;
+	top:50px;
+	left: 50%;
+	margin-left:-300px;
+	opacity: 0;
+	visibility: hidden;
+
+}
+
+section.gallery div.sites_container.mobile div.site {
+	position: absolute;
+	text-align: center;
+	top:50px;
+	left: 50%;
+	margin-left:-300px;
+	opacity: 0;
+	visibility: hidden;
+
+}
+
+section.gallery div.sites_container.desktop div.site.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+section.gallery div.sites_container.tablet div.site.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+section.gallery div.sites_container.mobile div.site.visible {
 	opacity: 1;
 	visibility: visible;
 }
@@ -346,7 +392,7 @@ section.gallery div.sites_container div.site div.gallery_image {
 	display: block;
 }
 
-section.gallery div.sites_container div.site a:first-of-type {
+section.gallery div.sites_container.desktop div.site a:first-of-type {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -358,6 +404,59 @@ section.gallery div.sites_container div.site a:first-of-type {
 	height: 773px;
 	position: relative;
 	overflow: hidden;
+}
+
+section.gallery div.sites_container.tablet div.site a:first-of-type {
+	display: none;
+}
+
+section.gallery div.sites_container.mobile div.site a:first-of-type {
+	display: none;
+}
+
+
+section.gallery div.sites_container.desktop div.site a:nth-of-type(2) {
+	display: none;
+}
+
+section.gallery div.sites_container.tablet div.site a:nth-of-type(2) {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../images/tablet-frame.svg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 442px 600px;
+	width:442px;
+	height: 600px;
+	position: relative;
+	overflow: hidden;	
+}
+
+section.gallery div.sites_container.mobile div.site a:nth-of-type(2) {
+	display: none;
+}
+
+section.gallery div.sites_container.desktop div.site a:nth-of-type(3) {
+	display: none;
+}
+
+section.gallery div.sites_container.tablet div.site a:nth-of-type(3) {
+	display: none;
+}
+
+section.gallery div.sites_container.mobile div.site a:nth-of-type(3) {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../images/phone-frame.svg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 382px 670px;
+	width:382px;
+	height: 670px;
+	position: relative;
+	overflow: hidden;		
 }
 
 

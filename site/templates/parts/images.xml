@@ -6,7 +6,7 @@
 			data-image="gallery::getThumbnailById($params['id'], null, 920, Thumbnail::CONSTRAIN_HEIGHT)" 
 			class="loading"
 			alt="" 
-			cms:eval="src,data-image"
+			cms:eval="data-image"
 			/>		
 	</a>
 </document>

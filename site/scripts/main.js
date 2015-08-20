@@ -76,8 +76,13 @@ Site.on_load = function() {
 
 	var version_links = $('div.controls a');
 	var container = $('div.sites_container');
+	container.attr('class',"sites_container desktop");
+	$('div.controls a.desktop').addClass('active');
+
 	version_links.on('click',function(){
 		var item = $(this);
+		item.addClass('active');
+		version_links.not(item).removeClass('active');
 		var newClass = item.attr('class');
 		container.attr('class',"sites_container " + newClass);
 

@@ -267,32 +267,29 @@ section.gallery div.controls a.active svg path {
 section.gallery  > a.next {
     display: inline-block;
     position: absolute;
-    top: 15%;
-    margin-top: -25px;
+    top:12%;
     right: 71%;
-    width: 50px;
-    height: 50px;
-    border: 0px solid #00b4c0;
-    border-left-width: 8px;
-    border-bottom-width: 8px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+	background-image: url(../images/arrow1.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:25px 70px;
+	width: 25px;
+	height: 70px;
+	transform:rotate(180deg); 
     z-index: 50;
 }
 
 section.gallery > a.previous {
     display: inline-block;
     position: absolute;
-    top: 15%;
-    margin-top: -25px;
+    top:12%;
     left: 71%;
-    width: 50px;
-    height: 50px;
-    border: 0px solid #00b4c0;
-    border-right-width: 8px;
-    border-top-width: 8px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+	background-image: url(../images/arrow1.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:25px 70px;
+	width: 25px;
+	height: 70px; 
     z-index: 50;
 }
 
@@ -458,6 +455,87 @@ section.gallery div.sites_container.mobile div.site a:nth-of-type(3) {
 	position: relative;
 	overflow: hidden;		
 }
+
+/*Clients Gallery*/
+
+section.clients {
+	display: block;
+	text-align: center;
+	padding:20px calc((100vw - 1200px) / 2);
+	position: relative;
+}
+
+div.client_gallery {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: relative;
+	height: 150px;
+	width: 1000px;
+	overflow: hidden;
+	transition:all 0.3s;
+}
+
+div.client_gallery img.clients.transit {
+	transition:none;
+}
+
+div.client_gallery img.clients {
+	position: absolute;
+	top:50%;
+	margin-top: -50px;
+	width:133px;
+	opacity: 0;
+	transition:all 0.3s;
+}
+
+div.client_gallery img.clients.visible {
+	opacity: 1;
+	transition:all 0.3;
+}
+
+div.client_gallery img.clients:hover {
+	transform:scale(1.1);
+}
+
+div.clients_gallery_controls {
+	display: block;
+	position: relative;
+}
+
+div.clients_gallery_controls h2 {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+    font-weight: 400;
+    font-size: 3em;	
+}
+
+div.clients_gallery_controls a.btn_next {
+    display: inline-block;
+	vertical-align: middle;
+    background-image: url(../images/arrow1.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25px 70px;
+    width: 25px;
+    height: 70px;
+    transform:rotate(180deg);		
+}
+
+div.clients_gallery_controls a.btn_previous {
+    display: inline-block;
+	vertical-align: middle;
+    background-image: url(../images/arrow1.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25px 70px;
+    width: 25px;
+    height: 70px;		
+}
+
 
 
 

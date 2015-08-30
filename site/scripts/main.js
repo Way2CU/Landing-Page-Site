@@ -162,8 +162,8 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 			self.controls.eq(Version.TABLET).hide();
 
 		if (image_count == 3)
-			self.controls.eq(Version.TABLET).show(); else
-			self.controls.eq(Version.TABLET).hide();
+			self.controls.eq(Version.MOBILE).show(); else
+			self.controls.eq(Version.MOBILE).hide();
 
 		// let the page switch
 		return true;

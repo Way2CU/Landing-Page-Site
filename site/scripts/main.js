@@ -194,8 +194,8 @@ Site.on_load = function() {
 		.images.set_step_size(1)
 		.images.set_center(true)
 		.images.add('div.client_gallery img')
-		.controls.attach_next('div.clients_gallery_controls a.btn_next')
-		.controls.attach_previous('div.clients_gallery_controls a.btn_previous');
+		.controls.attach_next('div.clients_gallery_wrap a.btn_next')
+		.controls.attach_previous('div.clients_gallery_wrap a.btn_previous');
 	 Site.client_logo_slider.images.update();
 
 	// create page control for landing page preview

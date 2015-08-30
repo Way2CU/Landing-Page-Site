@@ -110,22 +110,21 @@
 			</section>
 
 			<section class="clients">
-				<div class="client_gallery">
-
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="clients"
-						template="parts/client_images.xml"
-						/>
-
-				</div>
-
-				<div class="clients_gallery_controls">
+				<div class="clients_gallery_wrap">
 					<a href="javascript:void(0)" class="btn_previous"></a>
-					<h2><cms:text constant="clients"/></h2>
+					<div class="client_gallery">
+						<cms:module
+							name="gallery"
+							action="show_image_list"
+							group="clients"
+							template="parts/client_images.xml"
+							/>
+					</div>
 					<a href="javascript:void(0)" class="btn_next"></a>
 				</div>
+
+					<h2><cms:text constant="clients"/></h2>
+
 
 				<div class="testimonials">
 					<cms:module

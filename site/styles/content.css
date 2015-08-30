@@ -9,7 +9,7 @@
 section.about {
  	display: block;
  	text-align: center;
- 	padding:20px calc((100vw - 1200px) / 2);
+ 	padding:50px calc((100vw - 1200px) / 2);
 }
 
 section.about article {
@@ -212,7 +212,7 @@ section.about ul li:nth-of-type(3) h3:after {
 section.gallery {
 	display: block;
 	text-align: center;
-	padding:20px calc((100vw - 1200px) / 2);
+	padding:50px calc((100vw - 1200px) / 2);
 	background-image: url(../images/halftone.png);
 	background-repeat: repeat;
 	background-position: center center;
@@ -228,7 +228,7 @@ section.gallery h2 {
 
 section.gallery div.controls {
     position: absolute;
-    top: 250px;
+    top: 280px;
     left: 50%;
     margin-left: -300px;
 
@@ -297,7 +297,7 @@ section.gallery div.sites_container.desktop  {
 	display: block;
     padding-top: 20px;
     position: relative;
-    min-height: 1100px;
+    min-height: 1130px;
 }
 
 section.gallery div.sites_container.tablet  {
@@ -463,12 +463,24 @@ img.loading { position: relative; top: 200px; }
 section.clients {
 	display: block;
 	text-align: center;
-	padding:20px calc((100vw - 1200px) / 2);
+	padding:50px calc((100vw - 1200px) / 2);
 	position: relative;
 }
 
+section.clients > h2 {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+    font-weight: 400;
+    font-size: 3em;	
+}
+
 div.client_gallery {
-	display: block;
+	display: inline-block;
+	vertical-align: middle;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -477,6 +489,29 @@ div.client_gallery {
 	width: 1000px;
 	overflow: hidden;
 	transition:all 0.3s;
+}
+
+div.clients_gallery_wrap a.btn_next {
+    display: inline-block;
+	vertical-align: middle;
+    background-image: url(../images/arrow1.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25px 70px;
+    width: 25px;
+    height: 70px;
+    transform:rotate(180deg);		
+}
+
+div.clients_gallery_wrap a.btn_previous {
+    display: inline-block;
+	vertical-align: middle;
+    background-image: url(../images/arrow1.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25px 70px;
+    width: 25px;
+    height: 70px;		
 }
 
 div.client_gallery img.transit {
@@ -501,42 +536,6 @@ div.client_gallery img:hover {
 	transform:scale(1.1);
 }
 
-div.clients_gallery_controls {
-	display: block;
-	position: relative;
-}
-
-div.clients_gallery_controls h2 {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 10px;
-	padding-right: 10px;
-    font-weight: 400;
-    font-size: 3em;	
-}
-
-div.clients_gallery_controls a.btn_next {
-    display: inline-block;
-	vertical-align: middle;
-    background-image: url(../images/arrow1.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 25px 70px;
-    width: 25px;
-    height: 70px;
-    transform:rotate(180deg);		
-}
-
-div.clients_gallery_controls a.btn_previous {
-    display: inline-block;
-	vertical-align: middle;
-    background-image: url(../images/arrow1.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 25px 70px;
-    width: 25px;
-    height: 70px;		
-}
 
 div.testimonials {
 	display: block;

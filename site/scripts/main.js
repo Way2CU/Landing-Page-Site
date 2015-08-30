@@ -199,7 +199,7 @@ Site.on_load = function() {
 	 Site.client_logo_slider.images.update();
 
 	// create page control for landing page preview
-	Site.landing_pages_gallery = new PageControl('div.sites_container', 'div.site');
+	Site.landing_pages_gallery = new PageControl('section.gallery div.container', 'div.site');
 	Site.landing_pages_gallery
 		.attachPreviousControl($('section.gallery a.previous'))
 		.attachNextControl($('section.gallery a.next'))

@@ -98,7 +98,7 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 		self.container = self.page_control.container;
 		self.controls = controls_container.find('a');
 		self.sites = self.container.find('div.site');
-		self.images = self.sites.find('a img');
+		self.images = self.sites.find('a');
 
 		// connect signals
 		self.page_control.connect('page-flip', self.handler.page_switch);

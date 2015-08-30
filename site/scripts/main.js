@@ -140,6 +140,14 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	 * @param integer new_page
 	 */
 	self.handler.page_switch = function(current_page, new_page) {
+		var site = self.sites.eq(new_page);
+		var version = Version.get(self.container);
+		var image = self.sites.find('img').eq(version);
+
+		// load image
+		self._load_image(image, version);
+
+		// let the page switch
 		return true;
 	};
 

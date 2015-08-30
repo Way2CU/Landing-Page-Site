@@ -65,7 +65,26 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	var Version = {
 		DESKTOP: 0,
 		TABLET: 1,
-		MOBILE: 2
+		MOBILE: 2,
+
+		/**
+		 * Get version number based on presence of classes.
+		 *
+		 * @return integer
+		 */
+		get: function(control) {
+			var result = null;
+
+			if (control.hasClass('mobile')) {
+				result = 2;
+			} else if (control.hasClass('tablet')) {
+				result = 1;
+			} else {
+				result = 0;
+			}
+
+			return result;
+		}
 	}
 
 	// local namespaces
@@ -147,7 +166,7 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 			.removeClass('active');
 
 		// load currently active image
-		// TODO!
+		self._load_image(null, Version.get(link));
 	};
 
 	/**

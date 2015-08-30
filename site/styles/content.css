@@ -293,28 +293,28 @@ section.gallery > a.previous {
     z-index: 50;
 }
 
-section.gallery div.sites_container.desktop  {
+section.gallery div.container.desktop  {
 	display: block;
     padding-top: 20px;
     position: relative;
     min-height: 1130px;
 }
 
-section.gallery div.sites_container.tablet  {
+section.gallery div.container.tablet  {
 	display: block;
     padding-top: 20px;
     position: relative;
     min-height: 1100px;
 }
 
-section.gallery div.sites_container.mobile  {
+section.gallery div.container.mobile  {
 	display: block;
     padding-top: 20px;
     position: relative;
     min-height: 1100px;
 }
 
-section.gallery div.sites_container.desktop div.site {
+section.gallery div.container.desktop div.site {
 	position: absolute;
 	text-align: center;
 	top:50px;
@@ -325,7 +325,7 @@ section.gallery div.sites_container.desktop div.site {
 
 }
 
-section.gallery div.sites_container.tablet div.site {
+section.gallery div.container.tablet div.site {
 	position: absolute;
 	text-align: center;
 	top:50px;
@@ -336,7 +336,7 @@ section.gallery div.sites_container.tablet div.site {
 
 }
 
-section.gallery div.sites_container.mobile div.site {
+section.gallery div.container.mobile div.site {
 	position: absolute;
 	text-align: center;
 	top:50px;
@@ -347,22 +347,22 @@ section.gallery div.sites_container.mobile div.site {
 
 }
 
-section.gallery div.sites_container.desktop div.site.visible {
+section.gallery div.container.desktop div.site.visible {
 	opacity: 1;
 	visibility: visible;
 }
 
-section.gallery div.sites_container.tablet div.site.visible {
+section.gallery div.container.tablet div.site.visible {
 	opacity: 1;
 	visibility: visible;
 }
 
-section.gallery div.sites_container.mobile div.site.visible {
+section.gallery div.container.mobile div.site.visible {
 	opacity: 1;
 	visibility: visible;
 }
 
-section.gallery div.sites_container div.site div.info {
+section.gallery div.container div.site div.info {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -373,23 +373,23 @@ section.gallery div.sites_container div.site div.info {
 
 }
 
-section.gallery div.sites_container div.site div.info h3 {
+section.gallery div.container div.site div.info h3 {
 	display: block;
 	font-size: 1.7em;
 	color:#00b4c0;
 }
 
-section.gallery div.sites_container div.site div.info p {
+section.gallery div.container div.site div.info p {
 	display: block;
 	font-size: 1.3em;
 	color:#7f8c8d;
 }
 
-section.gallery div.sites_container div.site div.gallery_image {
+section.gallery div.container div.site div.gallery_image {
 	display: block;
 }
 
-section.gallery div.sites_container.desktop div.site a:first-of-type {
+section.gallery div.container.desktop div.site a:first-of-type {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -403,20 +403,20 @@ section.gallery div.sites_container.desktop div.site a:first-of-type {
 	overflow: hidden;
 }
 
-section.gallery div.sites_container.tablet div.site a:first-of-type {
+section.gallery div.container.tablet div.site a:first-of-type {
 	display: none;
 }
 
-section.gallery div.sites_container.mobile div.site a:first-of-type {
+section.gallery div.container.mobile div.site a:first-of-type {
 	display: none;
 }
 
 
-section.gallery div.sites_container.desktop div.site a:nth-of-type(2) {
+section.gallery div.container.desktop div.site a:nth-of-type(2) {
 	display: none;
 }
 
-section.gallery div.sites_container.tablet div.site a:nth-of-type(2) {
+section.gallery div.container.tablet div.site a:nth-of-type(2) {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -430,19 +430,19 @@ section.gallery div.sites_container.tablet div.site a:nth-of-type(2) {
 	overflow: hidden;	
 }
 
-section.gallery div.sites_container.mobile div.site a:nth-of-type(2) {
+section.gallery div.container.mobile div.site a:nth-of-type(2) {
 	display: none;
 }
 
-section.gallery div.sites_container.desktop div.site a:nth-of-type(3) {
+section.gallery div.container.desktop div.site a:nth-of-type(3) {
 	display: none;
 }
 
-section.gallery div.sites_container.tablet div.site a:nth-of-type(3) {
+section.gallery div.container.tablet div.site a:nth-of-type(3) {
 	display: none;
 }
 
-section.gallery div.sites_container.mobile div.site a:nth-of-type(3) {
+section.gallery div.container.mobile div.site a:nth-of-type(3) {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;

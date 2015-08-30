@@ -1,37 +1,33 @@
 <document>
-	<cms:if condition="$params['text_id'] == desktop">
-		<a href="$params['image']" cms:eval="href">		
-			<img 
+	<a href="$params['image']" cms:eval="href">
+		<cms:if condition="$params['text_id'] == 'desktop'">
+			<img
 				src="site/images/31.gif"
-				data-image="gallery::getThumbnailById($params['id'], null, 920, Thumbnail::CONSTRAIN_HEIGHT)" 
+				data-image="gallery::getThumbnailById($params['id'], null, 920, Thumbnail::CONSTRAIN_HEIGHT)"
 				class="loading"
-				alt="" 
-				cms:eval="data-image"
-				/>		
-		</a>
-	</cms:if>
+				alt="$params['title'][$language]"
+				cms:eval="data-image,alt"
+				/>
+		</cms:if>
 
-	<cms:if condition="$params['text_id'] == tablet">
-		<a href="$params['image']" cms:eval="href">		
-			<img 
+		<cms:if condition="$params['text_id'] == 'tablet'">
+			<img
 				src="site/images/31.gif"
-				data-image="gallery::getThumbnailById($params['id'], null, 375, Thumbnail::CONSTRAIN_HEIGHT)" 
+				data-image="gallery::getThumbnailById($params['id'], null, 375, Thumbnail::CONSTRAIN_HEIGHT)"
 				class="loading"
-				alt="" 
-				cms:eval="data-image"
-				/>		
-		</a>
-	</cms:if>
+				alt="$params['title'][$language]"
+				cms:eval="data-image,alt"
+				/>
+		</cms:if>
 
-	<cms:if condition="$params['text_id'] == mobile">
-		<a href="$params['image']" cms:eval="href">		
-			<img 
+		<cms:if condition="$params['text_id'] == 'mobile'">
+			<img
 				src="site/images/31.gif"
-				data-image="gallery::getThumbnailById($params['id'], null, 320, Thumbnail::CONSTRAIN_HEIGHT)" 
+				data-image="gallery::getThumbnailById($params['id'], null, 320, Thumbnail::CONSTRAIN_HEIGHT)"
 				class="loading"
-				alt="" 
-				cms:eval="data-image"
-				/>		
-		</a>
-	</cms:if>	
+				alt="$params['title'][$language]"
+				cms:eval="data-image,alt"
+				/>
+		</cms:if>
+	</a>
 </document>

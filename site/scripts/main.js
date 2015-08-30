@@ -52,7 +52,7 @@ Site.is_mobile = function() {
  *
  * @param object page_control
  */
-Site.LandingPagePreview = function(page_control) {
+Site.LandingPagePreview = function(page_control, controls_container) {
 	var self = this;
 
 	self.container = null;
@@ -77,7 +77,7 @@ Site.LandingPagePreview = function(page_control) {
 	self._init = function() {
 		// find DOM elements
 		self.container = self.page_control.container;
-		self.controls = self.container.find('div.controls a');
+		self.controls = controls_container.find('a');
 		self.sites = self.container.find('div.site');
 		self.images = self.sites.find('a img');
 
@@ -206,7 +206,10 @@ Site.on_load = function() {
 		.setWrapAround(true);
 
 	// create landing page preview
-	Site.landing_page_preview = new Site.LandingPagePreview(Site.landing_pages_gallery);
+	Site.landing_page_preview = new Site.LandingPagePreview(
+			Site.landing_pages_gallery,
+			$('section.gallery div.controls')
+		);
 };
 
 // connect document `load` event with handler function

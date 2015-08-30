@@ -479,11 +479,11 @@ div.client_gallery {
 	transition:all 0.3s;
 }
 
-div.client_gallery img.clients.transit {
+div.client_gallery img.transit {
 	transition:none;
 }
 
-div.client_gallery img.clients {
+div.client_gallery img {
 	position: absolute;
 	top:50%;
 	margin-top: -50px;
@@ -492,12 +492,12 @@ div.client_gallery img.clients {
 	transition:all 0.3s;
 }
 
-div.client_gallery img.clients.visible {
+div.client_gallery img.visible {
 	opacity: 1;
 	transition:all 0.3;
 }
 
-div.client_gallery img.clients:hover {
+div.client_gallery img:hover {
 	transform:scale(1.1);
 }
 

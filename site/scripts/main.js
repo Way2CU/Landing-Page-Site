@@ -141,7 +141,10 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 		link.addClass('active');
 
 		// change page control container class
-		self.container.attr('class', new_class).removeClass('active');
+		self.container
+			.attr('class', new_class)
+			.addClass('container')
+			.removeClass('active');
 
 		// load currently active image
 		// TODO!

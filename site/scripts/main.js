@@ -136,7 +136,9 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 				image.data('loaded', true);
 
 				// set source to newly loaded data
-				image.attr('src', temp_image.attr('src'));
+				image
+					.attr('src', temp_image.attr('src'))
+					.removeClass('loading');
 			})
 			.attr('src', image.data('image'));
 	};

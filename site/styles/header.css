@@ -321,11 +321,17 @@ header div.form_wrap form div.controls:before {
 	    -ms-transform: rotate(270deg);
 	     -o-transform: rotate(270deg);
 	        transform: rotate(270deg);
-	-webkit-animation: arrowMove 0.7s linear infinite alternate;        
+	-webkit-animation: arrowMove 0.7s linear infinite alternate; 
+	-moz-animation: arrowMove 0.7s linear infinite alternate;	       
 }
 
 /* Chrome, Safari, Opera */ 
 @-webkit-keyframes arrowMove {
+    from {right: 120%; }
+    to {right:110%;}
+}
+
+@-moz-keyframes arrowMove {
     from {right: 120%; }
     to {right:110%;}
 }

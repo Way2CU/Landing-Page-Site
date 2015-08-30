@@ -86,7 +86,7 @@
 
 			<section class="gallery">
 				<h2><cms:text constant="gallery_title"/></h2>
-				<div class="sites_container desktop">
+				<div class="container desktop">
 					<cms:module
 						name="gallery"
 						action="show_group_list"

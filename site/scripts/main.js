@@ -150,8 +150,20 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	 * @param integer new_page
 	 */
 	self.handler.page_switch = function(current_page, new_page) {
+		var site = self.sites.eq(new_page);
+		var image_count = site.find('a img').length;
+
 		// load image
 		self._load_image(new_page);
+
+		// hide certain controls
+		if (image_count >= 2)
+			self.controls.eq(Version.TABLET).show(); else
+			self.controls.eq(Version.TABLET).hide();
+
+		if (image_count == 3)
+			self.controls.eq(Version.TABLET).show(); else
+			self.controls.eq(Version.TABLET).hide();
 
 		// let the page switch
 		return true;

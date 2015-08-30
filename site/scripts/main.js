@@ -104,6 +104,9 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 		self.page_control.connect('page-flip', self.handler.page_switch);
 		self.controls.on('click', self.handler.version_click);
 		self.images.on('click', self.handler.image_click);
+
+		// load first image
+		self._load_image(null);
 	};
 
 	/**

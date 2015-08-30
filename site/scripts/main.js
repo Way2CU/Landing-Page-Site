@@ -109,12 +109,17 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	/**
 	 * Load image data for specified version.
 	 *
-	 * @param object image
-	 * @param integer version
+	 * @param integer site_index
 	 */
-	self._load_image = function(image, version) {
-		if (image == null)
-			var image = self.sites.filter('.visible').find('a img').eq(version);
+	self._load_image = function(site_index) {
+		// get site to load image for
+		if (site_index == null)
+			var site = self.sites.filter('.visible'); else
+			var site = self.sites.eq(site_index);
+
+		// get image to work with
+		var version = Version.get(self.container);
+		var image = site.find('a img').eq(version);
 
 		// make sure not to load image twice
 		if (image.data('loaded'))
@@ -140,12 +145,8 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	 * @param integer new_page
 	 */
 	self.handler.page_switch = function(current_page, new_page) {
-		var site = self.sites.eq(new_page);
-		var version = Version.get(self.container);
-		var image = self.sites.find('img').eq(version);
-
 		// load image
-		self._load_image(image, version);
+		self._load_image(new_page);
 
 		// let the page switch
 		return true;
@@ -174,7 +175,7 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 			.removeClass('active');
 
 		// load currently active image
-		self._load_image(null, Version.get(link));
+		self._load_image(null);
 	};
 
 	/**

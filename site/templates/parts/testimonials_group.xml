@@ -1,0 +1,9 @@
+<document>
+	<cms:module
+		name="articles"
+		action="show_list"
+		group="$params['id']"
+		template="parts/testimonial.xml"
+		cms:eval="group"
+		/>
+</document>

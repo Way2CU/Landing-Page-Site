@@ -479,11 +479,11 @@ div.client_gallery {
 	transition:all 0.3s;
 }
 
-div.client_gallery img.clients.transit {
+div.client_gallery img.transit {
 	transition:none;
 }
 
-div.client_gallery img.clients {
+div.client_gallery img {
 	position: absolute;
 	top:50%;
 	margin-top: -50px;
@@ -492,12 +492,12 @@ div.client_gallery img.clients {
 	transition:all 0.3s;
 }
 
-div.client_gallery img.clients.visible {
+div.client_gallery img.visible {
 	opacity: 1;
 	transition:all 0.3;
 }
 
-div.client_gallery img.clients:hover {
+div.client_gallery img:hover {
 	transform:scale(1.1);
 }
 
@@ -537,6 +537,111 @@ div.clients_gallery_controls a.btn_previous {
     width: 25px;
     height: 70px;		
 }
+
+div.testimonials {
+	display: block;
+	padding-top: 20px;
+}
+
+div.testimonials div.testimonial {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	margin-left: 20px;
+	margin-right: 20px;
+	position: relative;
+}
+
+div.testimonials div.testimonial svg {
+	display: block;
+	padding-bottom: 50px;
+
+}
+
+div.testimonials div.testimonial div.description {
+	position: absolute;
+	text-align: right;
+	display: block;
+	top: 50px;
+	right: 85px;
+	width: 200px;
+}
+
+div.testimonials div.testimonial div.description h3 {
+	display: block;
+	font-size: 1.2em;
+}
+
+div.testimonials div.testimonial div.description p {
+	display: block;
+	font-size: 0.9em;
+}
+
+div.testimonial:nth-of-type(1) svg polygon:nth-of-type(1) {
+    -webkit-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    animation: move 10s linear infinite;
+    -webkit-animation: move 8s linear infinite;
+}
+
+div.testimonial:nth-of-type(1) svg polygon:nth-child(2) {
+    -webkit-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    animation: move 10s linear infinite;
+    -webkit-animation: move 10s linear infinite;
+}
+
+div.testimonial:nth-of-type(2) svg polygon:nth-of-type(1) {
+    -webkit-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    animation: move 10s linear infinite;
+    -webkit-animation: move 4s linear infinite;
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+}
+
+div.testimonial:nth-of-type(2) svg polygon:nth-child(2) {
+    -webkit-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    animation: move 10s linear infinite;
+    -webkit-animation: move 7s linear infinite;
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
+}
+
+div.testimonial:nth-of-type(3) svg polygon:nth-of-type(1) {
+    -webkit-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    animation: move 10s linear infinite;
+    -webkit-animation: move 6s linear infinite;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+div.testimonial:nth-of-type(3) svg polygon:nth-child(2) {
+    -webkit-transform: translate(0px,0px);
+    transform: translate(0px,0px);
+    animation: move 10s linear infinite;
+    -webkit-animation: move 4s linear infinite;
+    animation-delay: 1.7s;
+    -webkit-animation-delay: 1.7s;
+}
+
+
+@keyframes move {
+    0% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px);}
+    50% {-webkit-transform: translate(-20px,40px);transform: translate(-20px,40px);}
+    80% {-webkit-transform: translate(0px,20px);transform: translate(0px,20px);}
+    100% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px);}
+}
+
+@-webkit-keyframes move {
+    0% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px);}
+    50% {-webkit-transform: translate(-20px,40px);transform: translate(-20px,40px);}
+    80% {-webkit-transform: translate(0px,20px);transform: translate(0px,20px);}
+    100% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)};
+}
+
 
 
 

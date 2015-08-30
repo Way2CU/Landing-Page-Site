@@ -127,6 +127,15 @@
 					<a href="javascript:void(0)" class="btn_next"></a>
 				</div>
 
+				<div class="testimonials">
+					<cms:module
+						name="articles"
+						action="show_group"
+						text_id="testimonials"
+						template="parts/testimonials_group.xml"
+					/>
+				</div>
+
 
 			</section>
 

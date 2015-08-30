@@ -1,0 +1,13 @@
+<document>
+	
+	<div class="testimonial">
+
+		<cms:svg file="../images/polygon.svg"/>
+		<div class="description">
+			<h3><cms:var param="title" multilanguage="yes"/></h3>
+			<cms:markdown param="content" multilanguage="yes"/>
+		</div>
+		
+	</div>
+
+</document>

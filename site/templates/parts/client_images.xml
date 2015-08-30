@@ -1,3 +1,3 @@
 <document>
-	<img src="$params['image']" alt="" class="clients" cms:eval="src"/>
+	<img src="$params['image']" alt="" cms:eval="src"/>
 </document>

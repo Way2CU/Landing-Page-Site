@@ -157,9 +157,7 @@ Site.on_load = function() {
 		.images.set_visible_count(6)
 		.images.set_step_size(1)
 		.images.set_center(true)
-		.images.set_spacing(20)
 		.images.add('img.clients')
-		.controls.set_pause_on_hover(false)
 		.controls.attach_next('div.clients_gallery_controls a.btn_next')
 		.controls.attach_previous('div.clients_gallery_controls a.btn_previous');
 

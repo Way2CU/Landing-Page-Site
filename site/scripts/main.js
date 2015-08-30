@@ -57,8 +57,16 @@ Site.LandingPagePreview = function(page_control) {
 
 	self.container = null;
 	self.controls = null;
+	self.sites = null;
 	self.images = null;
 	self.page_control = page_control;
+
+	// image versions
+	var Version = {
+		DESKTOP: 'desktop',
+		TABLET: 'tabler',
+		MOBILE: 'mobile'
+	}
 
 	// local namespaces
 	self.handler = {};
@@ -70,12 +78,40 @@ Site.LandingPagePreview = function(page_control) {
 		// find DOM elements
 		self.container = self.page_control.container;
 		self.controls = self.container.find('div.controls a');
-		self.images = self.container.find('div.site a img');
+		self.sites = self.container.find('div.site');
+		self.images = self.sites.find('a img');
 
 		// connect signals
 		self.page_control.connect('page-flip', self.handler.page_switch);
 		self.controls.on('click', self.handler.version_click);
 		self.images.on('click', self.handler.image_click);
+	};
+
+	/**
+	 * Load image data for specified version.
+	 *
+	 * @param object image
+	 * @param string version
+	 */
+	self._load_image = function(image, version) {
+		if (image == null)
+			var image = self.sites.filter('.active').find('a img');
+
+		// make sure not to load image twice
+		if (image.data('loaded'))
+			return;
+
+		// create temporary image container
+		var temp_image = $('<img>');
+		temp_image
+			.on('load', function(event) {
+				// mark image as loaded
+				image.data('loaded', true);
+
+				// set source to newly loaded data
+				image.attr('src', temp_image.attr('src'));
+			})
+			.attr('src', image.data('url'));
 	};
 
 	/**

@@ -107,6 +107,7 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 
 		// load first image
 		self._load_image(null);
+		self._apply_control_visibility(null);
 	};
 
 	/**
@@ -144,17 +145,15 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	};
 
 	/**
-	 * Handle switching page.
+	 * Show controls according to number of images.
 	 *
-	 * @param integer current_page
-	 * @param integer new_page
+	 * @param integer site_index
 	 */
-	self.handler.page_switch = function(current_page, new_page) {
-		var site = self.sites.eq(new_page);
+	self._apply_control_visibility = function(site_index) {
+		if (site_index == null)
+			var site = self.sites.filter('.visible'); else
+			var site = self.sites.eq(site_index);
 		var image_count = site.find('a img').length;
-
-		// load image
-		self._load_image(new_page);
 
 		// hide certain controls
 		if (image_count >= 2)
@@ -164,6 +163,18 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 		if (image_count == 3)
 			self.controls.eq(Version.MOBILE).show(); else
 			self.controls.eq(Version.MOBILE).hide();
+	};
+
+	/**
+	 * Handle switching page.
+	 *
+	 * @param integer current_page
+	 * @param integer new_page
+	 */
+	self.handler.page_switch = function(current_page, new_page) {
+		// load image
+		self._load_image(new_page);
+		self._apply_control_visibility(new_page);
 
 		// let the page switch
 		return true;

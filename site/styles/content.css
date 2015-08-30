@@ -554,6 +554,7 @@ div.testimonials div.testimonial {
 div.testimonials div.testimonial svg {
 	display: block;
 	padding-bottom: 50px;
+    -webkit-transform: translateZ(0);	
 
 }
 

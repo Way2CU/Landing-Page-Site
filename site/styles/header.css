@@ -295,6 +295,10 @@ form div.controls {
 	position: relative;      	
 }
 
+form div.controls button {
+    -webkit-transform: translateZ(0);	
+}
+
 header div.form_wrap form div.controls:before {
 	content: "";
 	position: absolute;
@@ -307,17 +311,17 @@ header div.form_wrap form div.controls:before {
 	background-size: 30px 30px;
 	width: 30px;
 	height: 30px;
-    -webkit-transform: translatez(0);
-    -moz-transform: translatez(0);
-    -ms-transform: translatez(0);
-    -o-transform: translatez(0);
-    transform: translatez(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
 	-webkit-transform: rotate(270deg);
 	   -moz-transform: rotate(270deg);
 	    -ms-transform: rotate(270deg);
 	     -o-transform: rotate(270deg);
 	        transform: rotate(270deg);
-	-webkit-animation: arrowMove 1s linear infinite alternate;        
+	-webkit-animation: arrowMove 0.7s linear infinite alternate;        
 }
 
 /* Chrome, Safari, Opera */ 

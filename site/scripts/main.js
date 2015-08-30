@@ -201,8 +201,8 @@ Site.on_load = function() {
 	// create page control for landing page preview
 	Site.landing_pages_gallery = new PageControl('div.sites_container', 'div.site');
 	Site.landing_pages_gallery
-		.attachPreviousControl($('div.sites_container a.previous'))
-		.attachNextControl($('div.sites_container a.next'))
+		.attachPreviousControl($('section.gallery a.previous'))
+		.attachNextControl($('section.gallery a.next'))
 		.setWrapAround(true);
 
 	// create landing page preview

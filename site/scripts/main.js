@@ -1,9 +1,9 @@
 /**
  * Main JavaScript
- * Site Name
+ * Way2CU Landing Pages
  *
  * Copyright (c) 2015. by Way2CU, http://way2cu.com
- * Authors:
+ * Authors: Mladen Mijatov, Tal Reznik
  */
 
 // create or use existing site scope

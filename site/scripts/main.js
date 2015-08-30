@@ -63,9 +63,9 @@ Site.LandingPagePreview = function(page_control) {
 
 	// image versions
 	var Version = {
-		DESKTOP: 'desktop',
-		TABLET: 'tabler',
-		MOBILE: 'mobile'
+		DESKTOP: 0,
+		TABLET: 1,
+		MOBILE: 2
 	}
 
 	// local namespaces
@@ -91,11 +91,11 @@ Site.LandingPagePreview = function(page_control) {
 	 * Load image data for specified version.
 	 *
 	 * @param object image
-	 * @param string version
+	 * @param integer version
 	 */
 	self._load_image = function(image, version) {
 		if (image == null)
-			var image = self.sites.filter('.active').find('a img');
+			var image = self.sites.filter('.visible').find('a img').eq(version);
 
 		// make sure not to load image twice
 		if (image.data('loaded'))

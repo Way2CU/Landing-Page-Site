@@ -414,6 +414,7 @@ section.gallery div.container.desktop div.site a:first-of-type {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 30px;
 	background-image: url(../images/desktop-frame.svg);
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -441,6 +442,7 @@ section.gallery div.container.tablet div.site a:nth-of-type(2) {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 55px;
 	background-image: url(../images/tablet-frame.svg);
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -467,6 +469,7 @@ section.gallery div.container.mobile div.site a:nth-of-type(3) {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 70px;
 	background-image: url(../images/phone-frame.svg);
 	background-repeat: no-repeat;
 	background-position: center top;

@@ -117,7 +117,6 @@ header article a.phone {
     font-weight: 700;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
     box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.33);
 	background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
 	background: -o-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);

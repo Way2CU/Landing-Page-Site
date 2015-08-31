@@ -264,6 +264,21 @@ Site.on_load = function() {
 		.attachNextControl($('section.gallery a.next'))
 		.setWrapAround(true);
 
+	// create function for positioning fixed menu 
+	$(window).scroll(function() {
+		var position = $('section.about').offset().top - 50;
+		var menu = $('div.menu');
+		var menu_form = $('div.menu_container form');
+		if($(window).scrollTop() >= position) {
+			menu.addClass('active');
+			menu_form.addClass('visible');
+
+		} else {
+			menu.removeClass('active');
+			menu_form.removeClass('visible');
+		}
+	})
+
 	// create landing page preview
 	Site.landing_page_preview = new Site.LandingPagePreview(
 			Site.landing_pages_gallery,

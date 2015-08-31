@@ -1,9 +1,11 @@
 <document>
 	<div class="site">
+
 		<div class="info">
 			<h3><cms:var param="name" multilanguage="yes"/></h3>		
 			<p><cms:var param="description" multilanguage="yes"/></p>
 		</div>
+		
 
 		<cms:module
 			name="gallery"

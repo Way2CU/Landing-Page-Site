@@ -24,6 +24,13 @@ div.menu {
     width: 100%;
  }
 
+div.menu.active {
+	position: fixed;
+	z-index: 10000;
+	background-color: white;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+} 
+
 div.menu div.menu_container {
     display: table;
     margin-left: auto;
@@ -52,6 +59,11 @@ div.menu_container form {
 	opacity: 0;
 	visibility: hidden;
 	width: 60%;
+}
+
+div.menu_container form.visible {
+	opacity: 1;
+	visibility: visible;
 }
 
 

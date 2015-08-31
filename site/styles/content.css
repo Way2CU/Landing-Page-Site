@@ -383,7 +383,7 @@ section.gallery div.container.mobile div.site.visible {
 	visibility: visible;
 }
 
-section.gallery div.container div.site div.info {
+section.gallery div.container div.site.visible div.info {
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -252,6 +252,7 @@ section.gallery div.controls {
     top: 280px;
     left: 50%;
     margin-left: -300px;
+    width: 600px;
 
 }
 section.gallery  div.controls a {

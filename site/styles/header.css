@@ -201,15 +201,15 @@ header div.figures {
 }
 
 header div.figures figure {
-    margin: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    width: 81%;
-    height: 270px;
-    border-radius: 3px;
-    position: relative;
-    overflow: hidden;	
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	width: 480px;
+	height: 270px;
+	border-radius: 3px;
+	position: relative;
+	overflow: hidden;	
 }
 
 header div.figures figure img {

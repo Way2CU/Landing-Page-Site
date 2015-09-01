@@ -45,27 +45,26 @@ Site.is_mobile = function() {
 	return result;
 };
 
-//Function for displaying fixed menu
 /**
- * @param object menu 
- *
- * @param object trigger_element
+ * @param object menu               jQuery object
+ * @param object trigger_element    jQuery object
  */
-function FixedMenu(menu,trigger_element){
+function FloatingMenu(menu, trigger_element){
     var self = this;
+
     self.menu = menu;
-    self.trigger_element = trigger_element;
-    self.position = null;
-    self.form_element = null;
-  
+    self.position = trigger_element.offset().top;
+    self.active = false;
+      
     /**
      * Object initialization.
      */
     self._init = function() {
-        self.form_element = self.menu.find('form');
-    	self.position = self.trigger_element.offset().top;
         // connect signals
         $(window).on('scroll', self.handle_scroll);
+
+        // set initial state
+        self.handle_scroll(null);
     };
     
     /**
@@ -74,15 +73,16 @@ function FixedMenu(menu,trigger_element){
      * @param object event
      */
     self.handle_scroll = function(event) {
+        var over_position = $(window).scrollTop() >= self.position;
+        
+        if (over_position && !self.active) {
+            self.menu.addClass('active');
+            self.active = true;
 
-		if($(window).scrollTop() >= self.position) {
-	 		self.menu.addClass('active');
-	 		self.form_element.addClass('visible');
-
-	 	} else {
-	 		self.menu.removeClass('active');
-			self.form_element.removeClass('visible');
-	 	}    	
+        } else if (!over_position && self.active) {
+            self.menu.removeClass('active');
+            self.active = false;
+        }
     };
 
     // finalize object
@@ -308,7 +308,7 @@ Site.on_load = function() {
 		.setWrapAround(true);
 
 	// create function for positioning fixed menu 
-	Site.menu =new FixedMenu($('div.menu'),$('section.about'));
+	Site.menu =new FloatingMenu($('div.menu'),$('section.about'));
 
 	// create landing page preview
 	Site.landing_page_preview = new Site.LandingPagePreview(

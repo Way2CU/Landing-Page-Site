@@ -1,6 +1,6 @@
 <document>
 	<img 
-		src="gallery::getThumbnailById($params['id'], null, 920, Thumbnail::CONSTRAIN_HEIGHT)"
+		src="gallery::getThumbnailById($params['id'], null, 480, Thumbnail::CONSTRAIN_HEIGHT)"
 		alt=""
 		class="desktop"
 		cms:eval="src"

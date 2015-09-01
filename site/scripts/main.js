@@ -47,7 +47,7 @@ Site.is_mobile = function() {
 
 //Function for displaying fixed menu
 /**
- * @param object menu
+ * @param object menu 
  *
  * @param object trigger_element
  */
@@ -57,9 +57,7 @@ function FixedMenu(menu,trigger_element){
     self.trigger_element = trigger_element;
     self.position = null;
     self.form_element = null;
-
-    
-      
+  
     /**
      * Object initialization.
      */

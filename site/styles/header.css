@@ -22,6 +22,7 @@ div.menu {
     top: 0px;
     left: 0px;
     width: 100%;
+    transition:all 0.3s;
  }
 
 div.menu.active {
@@ -59,6 +60,19 @@ div.menu_container form {
 	opacity: 0;
 	visibility: hidden;
 	width: 60%;
+}
+
+div.menu_container form label input {
+	background-color: rgba(255, 255, 255, 0.2);	
+	transition:all 0.3s;
+}
+
+div.menu_container form label input:hover {
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+
+div.menu_container form label input:focus {
+	background-color: white;
 }
 
 div.menu_container form.visible {

@@ -151,6 +151,7 @@
 				<span><cms:text constant="copyright"/></span>
 			</div>
 			</footer>
+				
 		</body>
 	</html>
 </document>

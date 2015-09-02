@@ -292,6 +292,7 @@ Site.on_load = function() {
 		.images.add('div.figures img.desktop')
 		.controls.set_pause_on_hover(false)
 		.controls.set_auto(timeout);
+	Site.desktop_screenshot_slider.images.update();	
 
 	// create mobile screen shot slider in header
 	Site.mobile_screenshot_slider = new Caracal.Gallery.Slider();
@@ -301,6 +302,7 @@ Site.on_load = function() {
 		.images.add('div.figures img.mobile')
 		.controls.set_pause_on_hover(false)
 		.controls.set_auto(timeout);
+	Site.mobile_screenshot_slider.images.update();		
 
 	// create slider for client logo gallery
 	 Site.client_logo_slider = new Caracal.Gallery.Slider();

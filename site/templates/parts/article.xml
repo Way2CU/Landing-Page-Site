@@ -1,6 +1,29 @@
 <document>
 	<article>
 		<h1><cms:var param="title" multilanguage="yes"/></h1>
+		<cms:mobile>
+			<div class="figures">
+				<figure>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="desktop_image_gallery"
+						template="parts/image.xml"
+						limit="1"
+						/>
+				</figure>
+
+				<div class="phone">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="mobile_image_gallery"
+						template="parts/image2.xml"
+						limit="1"
+						/>
+				</div>
+			</div>
+		</cms:mobile>
 		<cms:markdown param="content" multilanguage="yes"/>
 		<a
 			href="'tel:'.urlencode(Language::getText('phone'))"

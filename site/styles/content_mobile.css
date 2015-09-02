@@ -155,12 +155,12 @@ div.client_gallery img.transit {
 }
 
 div.client_gallery img {
-	position: absolute;
-	top:50%;
-	margin-top: -50px;
-	width:133px;
-	opacity: 0;
-	transition:all 0.3s;
+    position: absolute;
+    top: 50%;
+    margin-top: -37.5px;
+    width: 100px;
+    opacity: 0;
+    transition: all 0.3s;
 }
 
 div.client_gallery img.visible {

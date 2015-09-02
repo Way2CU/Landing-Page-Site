@@ -281,6 +281,8 @@ Site.on_load = function() {
 	 Site.client_logo_slider_mobile.images.update();		
 	}
 
+	if (!Site.is_mobile()){
+
 	// create desktop screen shot slider in header
 	var timeout = 4000;
 	Site.desktop_screenshot_slider = new Caracal.Gallery.Slider();
@@ -327,6 +329,7 @@ Site.on_load = function() {
 			Site.landing_pages_gallery,
 			$('section.gallery div.controls')
 		);
+	}
 };
 
 // connect document `load` event with handler function

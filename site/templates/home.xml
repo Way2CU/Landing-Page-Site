@@ -100,31 +100,33 @@
 					template="parts/article_group.xml"
 					/>
 			</section>
-
-			<section class="gallery">
-				<h2><cms:text constant="gallery_title"/></h2>
-				<div class="container desktop">
-					<cms:module
-						name="gallery"
-						action="show_group_list"
-						container="way2cu_sites"
-						template="parts/container.xml"
-						/>
-				</div>
-				<div class="controls">
-					<a href="javascript:void(0)" class="desktop">
-						<cms:svg file="../images/desktop-icon.svg"/>
-					</a>
-					<a href="javascript:void(0)" class="tablet">
-						<cms:svg file="../images/tablet-icon.svg"/>
-					</a>
-					<a href="javascript:void(0)" class="mobile">
-						<cms:svg file="../images/mobile-icon.svg"/>
-					</a>
-				</div>
-				<a href="javascript:void(0)" class="next"></a>
-				<a href="javascript:void(0)" class="previous"></a>
-			</section>
+			
+			<cms:desktop>
+				<section class="gallery">
+					<h2><cms:text constant="gallery_title"/></h2>
+					<div class="container desktop">
+						<cms:module
+							name="gallery"
+							action="show_group_list"
+							container="way2cu_sites"
+							template="parts/container.xml"
+							/>
+					</div>
+					<div class="controls">
+						<a href="javascript:void(0)" class="desktop">
+							<cms:svg file="../images/desktop-icon.svg"/>
+						</a>
+						<a href="javascript:void(0)" class="tablet">
+							<cms:svg file="../images/tablet-icon.svg"/>
+						</a>
+						<a href="javascript:void(0)" class="mobile">
+							<cms:svg file="../images/mobile-icon.svg"/>
+						</a>
+					</div>
+					<a href="javascript:void(0)" class="next"></a>
+					<a href="javascript:void(0)" class="previous"></a>
+				</section>
+			</cms:desktop>
 
 			<section class="clients">
 				<div class="clients_gallery_wrap">

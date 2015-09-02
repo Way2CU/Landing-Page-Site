@@ -227,13 +227,13 @@ section.about ul li:nth-of-type(3) h3:after {
 @-webkit-keyframes changeImage {
 	0% { opacity: 0 }
 	5%, 15% { opacity: 1 }
-	15%, 20% { opacity: 0 }
+	20%, 22% { opacity: 0}
 }
 
 @-moz-keyframes changeImage {
 	0% { opacity: 0 }
 	5%, 15% { opacity: 1 }
-	15%, 20% { opacity: 0 }
+	20%, 22% { opacity: 0}
 }
 
 section.gallery {
@@ -258,6 +258,7 @@ section.gallery div.controls {
     top: 280px;
     left: 50%;
     margin-left: -300px;
+    width: 600px;
 
 }
 section.gallery  div.controls a {

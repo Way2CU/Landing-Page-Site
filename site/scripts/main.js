@@ -45,6 +45,49 @@ Site.is_mobile = function() {
 	return result;
 };
 
+/**
+ * @param object menu               jQuery object
+ * @param object trigger_element    jQuery object
+ */
+function FloatingMenu(menu, trigger_element){
+    var self = this;
+
+    self.menu = menu;
+    self.position = trigger_element.offset().top;
+    self.active = false;
+
+    /**
+     * Object initialization.
+     */
+    self._init = function() {
+        // connect signals
+        $(window).on('scroll', self.handle_scroll);
+
+        // set initial state
+        self.handle_scroll(null);
+    };
+
+    /**
+     * Handle window scroll.
+     *
+     * @param object event
+     */
+    self.handle_scroll = function(event) {
+        var over_position = $(window).scrollTop() >= self.position;
+
+        if (over_position && !self.active) {
+            self.menu.addClass('active');
+            self.active = true;
+
+        } else if (!over_position && self.active) {
+            self.menu.removeClass('active');
+            self.active = false;
+        }
+    };
+
+    // finalize object
+    self._init();
+}
 
 /**
  * Object used for controling gallery and showing full preview of
@@ -299,8 +342,22 @@ Site.LandingPagePreview = function(page_control, controls_container) {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile())
+	if (Site.is_mobile()) {
 		Site.mobile_menu = new Caracal.MobileMenu();
+	// create slider for client logo gallery
+	 Site.client_logo_slider_mobile = new Caracal.Gallery.Slider();
+	 Site.client_logo_slider_mobile
+		.images.set_container('div.client_gallery')
+		.images.set_visible_count(2)
+		.images.set_step_size(2)
+		.images.set_center(true)
+		.images.add('div.client_gallery img')
+		.controls.attach_next('div.clients_gallery_wrap a.btn_next')
+		.controls.attach_previous('div.clients_gallery_wrap a.btn_previous');
+	 Site.client_logo_slider_mobile.images.update();
+	}
+
+	if (!Site.is_mobile()){
 
 	// create desktop screen shot slider in header
 	var timeout = 4000;
@@ -311,6 +368,7 @@ Site.on_load = function() {
 		.images.add('div.figures img.desktop')
 		.controls.set_pause_on_hover(false)
 		.controls.set_auto(timeout);
+	Site.desktop_screenshot_slider.images.update();
 
 	// create mobile screen shot slider in header
 	Site.mobile_screenshot_slider = new Caracal.Gallery.Slider();
@@ -320,6 +378,7 @@ Site.on_load = function() {
 		.images.add('div.figures img.mobile')
 		.controls.set_pause_on_hover(false)
 		.controls.set_auto(timeout);
+	Site.mobile_screenshot_slider.images.update();
 
 	// create slider for client logo gallery
 	 Site.client_logo_slider = new Caracal.Gallery.Slider();
@@ -340,26 +399,15 @@ Site.on_load = function() {
 		.attachNextControl($('section.gallery a.next'))
 		.setWrapAround(true);
 
-	// create function for positioning fixed menu
-	$(window).scroll(function() {
-		var position = $('section.about').offset().top - 50;
-		var menu = $('div.menu');
-		var menu_form = $('div.menu_container form');
-		if($(window).scrollTop() >= position) {
-			menu.addClass('active');
-			menu_form.addClass('visible');
-
-		} else {
-			menu.removeClass('active');
-			menu_form.removeClass('visible');
-		}
-	})
+	// create fixed position menu
+	Site.menu = new FloatingMenu($('div.menu'), $('section.about'));
 
 	// create landing page preview
 	Site.landing_page_preview = new Site.LandingPagePreview(
 			Site.landing_pages_gallery,
 			$('section.gallery div.controls')
 		);
+	}
 };
 
 // connect document `load` event with handler function

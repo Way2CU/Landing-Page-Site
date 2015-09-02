@@ -1,0 +1,85 @@
+/**
+ * Footer Mobile Style Sheet
+ * Way2CU Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+footer {
+ 	display: block;
+ 	text-align: center;
+}
+
+footer section {
+	display: block;
+    padding-top: 50px;	
+	background-image: url(../images/mobile-footer-background.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+    background-size:100% auto;	
+	min-height: 550px;
+	position: relative;	
+}
+
+footer section article {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.49);
+    border:2px solid #00b4c0;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+	color:white;
+	width:calc(95% - 40px);
+}
+
+footer section article h2 {
+	display:block;
+    font-weight: 400;
+    font-size: 2em	
+}
+
+footer section article strong {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 1.3em;
+}
+
+footer div.copyright {
+	display: block;
+	background-color: black;
+	direction: ltr;
+}
+
+footer div.copyright span {
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 40px;
+	background-image: url(../images/way2cu-color.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 30px 34.5px;
+	font-size: 0.7em;
+	color: white;
+	text-align: left;
+	width: 200px;
+}
+
+footer div.copyright span a {
+	display: inline-block;
+	padding-left: 5px;
+	text-decoration: underline;
+	color:#449bb5;
+	transition:all 0.3s;
+}
+
+footer div.copyright span a:hover {
+	color:#5bc2d8;
+}

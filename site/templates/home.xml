@@ -10,26 +10,42 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
-			<header>
-				<div class="menu">
-					<div class="menu_container">
 
+			<header>
+				<cms:desktop>
+					<div class="menu">
+						<div class="menu_container">
+
+							<a href="javascript:void(0)" class="logo"></a>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="contact"
+								/>
+							<a
+								href="'tel:'.urlencode(Language::getText('phone'))"
+								cms:eval="href"
+								class="phone"
+								>
+								<cms:text constant="phone"/>
+								<cms:svg file="../images/phone-circle.svg"/>
+							</a>
+						</div>
+					</div>
+				</cms:desktop>
+
+				<cms:mobile>
+					<div class="menu">
 						<a href="javascript:void(0)" class="logo"></a>
-						<cms:module
-							name="contact_form"
-							action="show"
-							text_id="contact"
-							/>
 						<a
 							href="'tel:'.urlencode(Language::getText('phone'))"
 							cms:eval="href"
 							class="phone"
 							>
-							<cms:text constant="phone"/>
 							<cms:svg file="../images/phone-circle.svg"/>
 						</a>
 					</div>
-				</div>
+				</cms:mobile>
 
 				<cms:module
 					name="articles"
@@ -37,26 +53,27 @@
 					text_id="header_article"
 					template="parts/article.xml"
 					/>
+				<cms:desktop>
+					<div class="figures">
+						<figure>
+							<cms:module
+								name="gallery"
+								action="show_image_list"
+								group="desktop_image_gallery"
+								template="parts/image.xml"
+								/>
+						</figure>
 
-				<div class="figures">
-					<figure>
-						<cms:module
-							name="gallery"
-							action="show_image_list"
-							group="desktop_image_gallery"
-							template="parts/image.xml"
-							/>
-					</figure>
-
-					<div class="phone">
-						<cms:module
-							name="gallery"
-							action="show_image_list"
-							group="mobile_image_gallery"
-							template="parts/image2.xml"
-							/>
+						<div class="phone">
+							<cms:module
+								name="gallery"
+								action="show_image_list"
+								group="mobile_image_gallery"
+								template="parts/image2.xml"
+								/>
+						</div>
 					</div>
-				</div>
+				</cms:desktop>
 				<div class="form_wrap">
 					<p><cms:text constant="form_title"/></p>
 					<cms:module
@@ -83,31 +100,33 @@
 					template="parts/article_group.xml"
 					/>
 			</section>
-
-			<section class="gallery">
-				<h2><cms:text constant="gallery_title"/></h2>
-				<div class="container desktop">
-					<cms:module
-						name="gallery"
-						action="show_group_list"
-						container="way2cu_sites"
-						template="parts/container.xml"
-						/>
-				</div>
-				<div class="controls">
-					<a href="javascript:void(0)" class="desktop">
-						<cms:svg file="../images/desktop-icon.svg"/>
-					</a>
-					<a href="javascript:void(0)" class="tablet">
-						<cms:svg file="../images/tablet-icon.svg"/>
-					</a>
-					<a href="javascript:void(0)" class="mobile">
-						<cms:svg file="../images/mobile-icon.svg"/>
-					</a>
-				</div>
-				<a href="javascript:void(0)" class="next"></a>
-				<a href="javascript:void(0)" class="previous"></a>
-			</section>
+			
+			<cms:desktop>
+				<section class="gallery">
+					<h2><cms:text constant="gallery_title"/></h2>
+					<div class="container desktop">
+						<cms:module
+							name="gallery"
+							action="show_group_list"
+							container="way2cu_sites"
+							template="parts/container.xml"
+							/>
+					</div>
+					<div class="controls">
+						<a href="javascript:void(0)" class="desktop">
+							<cms:svg file="../images/desktop-icon.svg"/>
+						</a>
+						<a href="javascript:void(0)" class="tablet">
+							<cms:svg file="../images/tablet-icon.svg"/>
+						</a>
+						<a href="javascript:void(0)" class="mobile">
+							<cms:svg file="../images/mobile-icon.svg"/>
+						</a>
+					</div>
+					<a href="javascript:void(0)" class="next"></a>
+					<a href="javascript:void(0)" class="previous"></a>
+				</section>
+			</cms:desktop>
 
 			<section class="clients">
 				<div class="clients_gallery_wrap">
@@ -151,6 +170,7 @@
 				<span><cms:text constant="copyright"/></span>
 			</div>
 			</footer>
+				
 		</body>
 	</html>
 </document>

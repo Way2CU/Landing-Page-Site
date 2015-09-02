@@ -1,3 +1,19 @@
 <document>
-	<img src="$params['image']" alt="" cms:eval="src"/>
+	<cms:desktop>
+		<img 
+			src="gallery::getThumbnailById($params['id'], null, 133, Thumbnail::CONSTRAIN_HEIGHT)"
+			alt=""
+			class="desktop"
+			cms:eval="src"
+			/>
+	</cms:desktop>
+
+	<cms:mobile>
+		<img 
+			src="gallery::getThumbnailById($params['id'], null, 100, Thumbnail::CONSTRAIN_HEIGHT)"
+			alt=""
+			class="desktop"
+			cms:eval="src"
+			/>
+	</cms:mobile>		
 </document>

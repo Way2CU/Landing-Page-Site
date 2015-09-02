@@ -63,7 +63,6 @@ header article {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: right;
-	width: 90%;
 }
 
 header article h1 {
@@ -75,6 +74,13 @@ header article h1 {
 	font-size: 2em;
 }
 
+header article ul {
+    display: block;	
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
 header article li {
 	padding-bottom: 2px;
 	font-size: 1em;
@@ -82,10 +88,13 @@ header article li {
 
 header article p {
 	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-weight: 700;
+	width: 95%;
 }
 
 header article a.phone {
@@ -138,43 +147,40 @@ header article a.phone svg path {
 }
 
 header div.figures {
-	display:block;
+    display: block;
     margin-left: auto;
-    margin-right: auto;	
-	background-image:url(../images/desktop-monitor.png);
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: 320px 284px;
-	min-height: 284px;
-	position: relative;
+    margin-right: auto;
+    position: relative;
+    width: 95%;
 }
 
 
 header div.figures figure {
-	margin: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 200px;
-    border-radius: 3px;
-    position: relative;
+    display: block;
+    margin: 0px;
+    background-image: url(../images/desktop-monitor.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 320px 284px;
+    min-height: 284px;
     overflow: hidden;
 }
 
 
 header div.figures figure img {
-	position: absolute;
-	top: 12px;
-	right: 0px;
-	width: 300px;
-	height: 169px;
-	opacity: 1;
-	transition: all 0.8s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 13px;
+    width: 290px;
+    height: 163px;
+    opacity: 1;
+    transition: all 0.8s;
 }
 
 header div.figures div.phone {
 	display: block;
-	margin-top: -35px;
+	margin-top: -145px;
 	margin-bottom: 10px; 
 	margin-right: -25px;
 	background-image: url(../images/phone.png);

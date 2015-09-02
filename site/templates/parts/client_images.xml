@@ -1,3 +1,8 @@
 <document>
-	<img src="$params['image']" alt="" cms:eval="src"/>
+	<img 
+		src="gallery::getThumbnailById($params['id'], null, 133, Thumbnail::CONSTRAIN_HEIGHT)"
+		alt=""
+		class="desktop"
+		cms:eval="src"
+		/>
 </document>

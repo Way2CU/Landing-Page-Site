@@ -266,8 +266,20 @@ Site.LandingPagePreview = function(page_control, controls_container) {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile())
+	if (Site.is_mobile()) { 
 		Site.mobile_menu = new Caracal.MobileMenu();
+	// create slider for client logo gallery
+	 Site.client_logo_slider_mobile = new Caracal.Gallery.Slider();
+	 Site.client_logo_slider_mobile
+		.images.set_container('div.client_gallery')
+		.images.set_visible_count(2)
+		.images.set_step_size(2)
+		.images.set_center(true)
+		.images.add('div.client_gallery img')
+		.controls.attach_next('div.clients_gallery_wrap a.btn_next')
+		.controls.attach_previous('div.clients_gallery_wrap a.btn_previous');
+	 Site.client_logo_slider_mobile.images.update();		
+	}
 
 	// create desktop screen shot slider in header
 	var timeout = 4000;

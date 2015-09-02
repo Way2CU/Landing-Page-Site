@@ -128,6 +128,7 @@ div.client_gallery {
 div.clients_gallery_wrap a.btn_next {
     display: inline-block;
 	vertical-align: middle;
+	margin-right: 10px;
     background-image: url(../images/arrow1.svg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -140,6 +141,7 @@ div.clients_gallery_wrap a.btn_next {
 div.clients_gallery_wrap a.btn_previous {
     display: inline-block;
 	vertical-align: middle;
+	margin-left: 10px;
     background-image: url(../images/arrow1.svg);
     background-repeat: no-repeat;
     background-position: center center;

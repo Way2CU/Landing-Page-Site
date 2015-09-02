@@ -9,7 +9,7 @@
 	</cms:desktop>
 	<cms:mobile>
 		<img 
-			src="gallery::getThumbnailById($params['id'], null, 300, Thumbnail::CONSTRAIN_HEIGHT)"
+			src="gallery::getThumbnailById($params['id'], null, 290, Thumbnail::CONSTRAIN_HEIGHT)"
 			alt=""
 			class="desktop"
 			cms:eval="src"

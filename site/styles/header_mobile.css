@@ -1,0 +1,337 @@
+/**
+ * Header Mobile Style Sheet
+ * Way2CU Site
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+ header {
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+    background-image: url(../images/mobile-header-background2.jpg);
+    background-repeat: no-repeat;
+    background-position: center 60px;
+    background-size: 100% auto;
+    min-height: 400px;
+}
+
+div.menu {
+    display: block;
+    position: fixed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10000;	    
+ }
+
+div.menu a.phone {
+	position: absolute;
+	top:50%;
+	margin-top:-17.5px; 
+	left: 5px;
+}
+
+div.menu a.phone svg {
+	display: block;
+	width: 35px;
+	height: 35px;
+}
+
+div.menu a.phone svg path {
+	fill:#33485d;
+}
+
+div.menu a.logo {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 176px 50px;
+    width: 176px;
+    height: 50px;
+}
+
+header article {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	width: 90%;
+}
+
+header article h1 {
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 400;
+	font-size: 2em;
+}
+
+header article li {
+	padding-bottom: 2px;
+	font-size: 1em;
+}
+
+header article p {
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 700;
+}
+
+header article a.phone {
+	display:block;
+	margin-left: 30px;
+	margin-right: 30px;
+	text-align: center;
+    padding: 6px 20px;
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.33);
+	background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
+	background: -o-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
+	background: linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);   
+    position: relative;
+    z-index: 1;
+}
+
+header article a.phone:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+    border-radius: 8px;
+	background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
+	background: -o-linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
+	background: linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
+    z-index: -1;
+    transition:all 0.3s;
+    opacity: 0;	
+}
+
+header article a.phone:hover:before {
+	opacity: 1;
+}
+
+header article a.phone svg {
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 5px;
+	width: 38px;
+}
+
+header article a.phone svg path {
+	fill:white;
+}
+
+header div.figures {
+	display:block;
+    margin-left: auto;
+    margin-right: auto;	
+	background-image:url(../images/desktop-monitor.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 320px 284px;
+	min-height: 284px;
+	position: relative;
+}
+
+
+header div.figures figure {
+	margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 200px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+header div.figures figure img {
+	position: absolute;
+	top: 12px;
+	right: 0px;
+	width: 300px;
+	height: 169px;
+	opacity: 1;
+	transition: all 0.8s;
+}
+
+header div.figures div.phone {
+	display: block;
+	margin-top: -35px;
+	margin-bottom: 10px; 
+	margin-right: -25px;
+	background-image: url(../images/phone.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 150px 217px;
+	width: 150px;
+	height: 217px;
+	overflow: hidden;
+	position: relative;
+}
+
+header div.figures div.phone img {
+    position: absolute;
+    top: 15px;
+    right: 26px;
+    width: 97px;
+    height: 174px;
+    opacity: 1;
+    transition: all 0.8s; 	
+}
+
+
+header div.form_wrap {
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+header div.form_wrap p {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+	font-size: 1.2em;
+	font-weight: 700;
+	width: 95%;
+}
+
+form {
+	display: block;
+	padding-top: 40px;
+	position: relative;
+}
+
+form:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    margin-right: -15px;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+}
+
+form label {
+	display:block;
+	padding-bottom: 10px;
+	vertical-align: top;
+	position: relative;
+}
+
+
+form label:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    background-image: url(../images/form-icons-sprite.svg);
+    background-repeat: no-repeat;
+    background-position: -120px 0px;
+    background-size: 200px 50px;
+    width: 50px;
+    height: 50px;
+}
+
+form label:nth-of-type(2):before {
+    background-position: -70px 0px;
+}
+
+form label:nth-of-type(3):before {
+    background-position: -20px 0px;
+}
+
+form label input {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 40px;
+	background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #bcc2c6;
+    border-left: none;
+    box-shadow: 0px 2px 10px rgba(126, 139, 140, 0.2);
+    width:calc(95% - 40px);
+    transition:all 0.3s;
+}
+
+form label input:hover {
+	background-color: rgba(255, 255, 255, 0.6);	
+}
+
+form label input:focus {
+	background-color: white;
+}
+
+form div.controls {
+	display: inline-block;
+	vertical-align: middle; 
+	position: relative;      	
+}
+
+form div.controls button {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border: none;
+    background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
+    background: -o-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
+    background: linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
+    font-size: 1.3em;
+    line-height: 100%;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;  
+      	
+}
+
+form div.controls button:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+    border-radius: 8px;
+	background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
+	background: -o-linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
+	background: linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
+    z-index: -1;
+    transition:all 0.3s;
+    opacity: 0;	
+}
+
+form div.controls button:hover:before {
+	opacity: 1;
+}
+
+form div.controls button:active {
+    box-shadow: 0px 0px 0px black;
+} 

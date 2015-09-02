@@ -60,6 +60,8 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	self.sites = null;
 	self.images = null;
 	self.page_control = page_control;
+	self.background = null;
+	self.preview_container = null;
 
 	// image versions
 	var Version = {
@@ -89,6 +91,7 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 
 	// local namespaces
 	self.handler = {};
+	self.preview = {};
 
 	/**
 	 * Object initialization.
@@ -100,10 +103,48 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 		self.sites = self.container.find('div.site');
 		self.images = self.sites.find('a');
 
+		// prepare preview
+		self.preview.background = $('div.dialog-background');
+		self.preview.container = $('<div>');
+		self.preview.container
+			.after(self.background)
+			.attr('id', 'preview');
+
+		self.preview.controls = $('<div>');
+		self.preview.controls
+			.appendTo(self.preview.container)
+			.addClass('controls');
+
+		self.preview.version_desktop = $('<a>');
+		self.preview.version_tablet = $('<a>');
+		self.preview.version_mobile = $('<a>');
+		self.preview.close_preview = $('<a>');
+
+		self.preview.version_desktop
+			.appendTo(self.preview.controls)
+			.addClass('desktop');
+
+		self.preview.version_tablet
+			.appendTo(self.preview.controls)
+			.addClass('tablet');
+
+		self.preview.version_mobile
+			.appendTo(self.preview.controls)
+			.addClass('mobile');
+
+		self.preview.close_preview
+			.appendTo(self.preview.controls)
+			.addClass('close');
+
 		// connect signals
 		self.page_control.connect('page-flip', self.handler.page_switch);
 		self.controls.on('click', self.handler.version_click);
 		self.images.on('click', self.handler.image_click);
+
+		self.preview.version_desktop.on('click', self.handler.version_click);
+		self.preview.version_tablet.on('click', self.handler.version_click);
+		self.preview.version_mobile.on('click', self.handler.version_click);
+		self.preview.close_preview.on('click', self.handler.close_preview);
 
 		// load first image
 		self._load_image(null);
@@ -166,6 +207,34 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	};
 
 	/**
+	 * Show site preview.
+	 */
+	self.show_preview = function() {
+		var site = self.sites.filter('.visible');
+
+		self.preview.background.addClass('visible');
+		self.preview.container.addClass('visible');
+	};
+
+	/**
+	 * Hide site preview.
+	 */
+	self.hide_preview = function() {
+		self.preview.background.removeClass('visible');
+		self.preview.container.removeClass('visible');
+	};
+
+	/**
+	 * Handle clicking on close preview.
+	 *
+	 * @param object event
+	 */
+	self.handler.close_preview = function(event) {
+		event.preventDefault();
+		self.hide_preview();
+	};
+
+	/**
 	 * Handle switching page.
 	 *
 	 * @param integer current_page
@@ -202,6 +271,11 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 			.addClass('container')
 			.removeClass('active');
 
+		// change preview container class
+		self.preview.container
+			.attr('class', new_class)
+			.removeClass('active');
+
 		// load currently active image
 		self._load_image(null);
 	};
@@ -212,6 +286,8 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 	 * @param object event
 	 */
 	self.handler.image_click = function(event) {
+		event.preventDefault();
+		self.show_preview();
 	};
 
 	// finalize object
@@ -264,7 +340,7 @@ Site.on_load = function() {
 		.attachNextControl($('section.gallery a.next'))
 		.setWrapAround(true);
 
-	// create function for positioning fixed menu 
+	// create function for positioning fixed menu
 	$(window).scroll(function() {
 		var position = $('section.about').offset().top - 50;
 		var menu = $('div.menu');

@@ -557,11 +557,6 @@ div.client_gallery img.visible {
 	transition:all 0.3;
 }
 
-div.client_gallery img:hover {
-	transform:scale(1.1);
-}
-
-
 div.testimonials {
 	display: block;
 	padding-top: 20px;

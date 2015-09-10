@@ -65,6 +65,7 @@ section.about ul li:first-of-type:before {
     background-color: #bcc2c6;
     -webkit-animation: changeCircleColor 15s 2s infinite;
     -moz-animation: changeCircleColor 15s 2s infinite;
+    animation: changeCircleColor 15s 2s infinite;
 }
 
 section.about ul li:first-of-type:after {
@@ -78,6 +79,7 @@ section.about ul li:first-of-type:after {
     background-color: #bcc2c6;
     -webkit-animation: changeCircleColor 15s 3s infinite;
     -moz-animation: changeCircleColor 15s 3s infinite;
+    animation: changeCircleColor 15s 3s infinite;
 }
 
 section.about ul li:nth-of-type(2):before {
@@ -91,6 +93,7 @@ section.about ul li:nth-of-type(2):before {
     background-color: #bcc2c6;
     -webkit-animation: changeCircleColor 15s 4s infinite;
     -moz-animation: changeCircleColor 15s 4s infinite;
+    animation: changeCircleColor 15s 4s infinite;
 }
 
 section.about ul li:nth-of-type(2):after {
@@ -104,6 +107,7 @@ section.about ul li:nth-of-type(2):after {
     background-color: #bcc2c6;
     -webkit-animation: changeCircleColor 15s 7s infinite;
     -moz-animation: changeCircleColor 15s 7s infinite;
+    animation: changeCircleColor 15s 7s infinite;
 }
 
 section.about ul li:nth-of-type(3):before {
@@ -117,6 +121,7 @@ section.about ul li:nth-of-type(3):before {
     background-color: #bcc2c6;
     -webkit-animation: changeCircleColor 15s 9s infinite;
     -moz-animation: changeCircleColor 15s 9s infinite;
+    animation: changeCircleColor 15s 9s infinite;
 }
 
 section.about ul li:nth-of-type(3):after {
@@ -130,6 +135,7 @@ section.about ul li:nth-of-type(3):after {
     background-color: #bcc2c6;
     -webkit-animation: changeCircleColor 15s 8s infinite;
     -moz-animation: changeCircleColor 15s 8s infinite;
+    animation: changeCircleColor 15s 8s infinite;
 }
 
 @keyframes changeCircleColor {
@@ -204,18 +210,21 @@ section.about ul li:nth-of-type(1) h3:after {
 	background-position: -400px -200px;
     -webkit-animation: changeImage 15s infinite;
     -moz-animation: changeImage 15s infinite;
+    animation: changeImage 15s infinite;
 }
 
 section.about ul li:nth-of-type(2) h3:after {
 	background-position: -200px -200px;
     -webkit-animation: changeImage 15s 5s infinite;
     -moz-animation: changeImage 15s 5s infinite;
+    animation: changeImage 15s 5s infinite;
 }
 
 section.about ul li:nth-of-type(3) h3:after {
 	background-position: 0px -200px;
     -webkit-animation: changeImage 15s 10s infinite;
     -moz-animation: changeImage 15s 10s infinite;
+    animation: changeImage 15s 10s infinite;
 }
 
 @keyframes changeImage {
@@ -227,13 +236,13 @@ section.about ul li:nth-of-type(3) h3:after {
 @-webkit-keyframes changeImage {
 	0% { opacity: 0 }
 	5%, 15% { opacity: 1 }
-	20%, 22% { opacity: 0}
+	20%, 22% { opacity: 0 }
 }
 
 @-moz-keyframes changeImage {
 	0% { opacity: 0 }
 	5%, 15% { opacity: 1 }
-	20%, 22% { opacity: 0}
+	20%, 22% { opacity: 0 }
 }
 
 section.gallery {
@@ -259,24 +268,21 @@ section.gallery div.controls {
     left: 50%;
     margin-left: -300px;
     width: 600px;
-
 }
+
 section.gallery  div.controls a {
 	display: inline-block;
 	vertical-align: top;
 	margin-left: 25px;
 	margin-right: 25px;
-	width: 150px;
 	text-decoration: none;
 	transition: all 0.3s;
 }
 
 section.gallery  div.controls a svg {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	height: 100%;
+	width: 150px;
+	height: 150px;
 	transition: all 0.3s;
 }
 
@@ -410,80 +416,51 @@ section.gallery div.container div.site div.info p {
 	color: #7f8c8d;
 }
 
-section.gallery div.container div.site div.gallery_image {
-	display: block;
+section.gallery div.container div.site a img {
+	display: none;
 }
 
-section.gallery div.container.desktop div.site a:first-of-type {
+section.gallery div.container div.site a {
 	display: block;
+	width: 1000px;
+	height: 773px;
+
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 30px;
+
+	position: relative;
+	overflow: hidden;
+
 	background-image: url(../images/desktop-frame.svg);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 1000px 773px;
-	width: 1000px;
-	height: 773px;
-	position: relative;
-	overflow: hidden;
 }
 
-section.gallery div.container.tablet div.site a:first-of-type {
-	display: none;
-}
-
-section.gallery div.container.mobile div.site a:first-of-type {
-	display: none;
-}
-
-section.gallery div.container.desktop div.site a:nth-of-type(2) {
-	display: none;
-}
-
-section.gallery div.container.tablet div.site a:nth-of-type(2) {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+section.gallery div.container.tablet div.site a {
 	padding-top: 55px;
 	background-image: url(../images/tablet-frame.svg);
-	background-repeat: no-repeat;
-	background-position: center top;
 	background-size: 442px 600px;
 	width: 442px;
 	height: 600px;
-	position: relative;
-	overflow: hidden;
 }
 
-section.gallery div.container.mobile div.site a:nth-of-type(2) {
-	display: none;
-}
-
-section.gallery div.container.desktop div.site a:nth-of-type(3) {
-	display: none;
-}
-
-section.gallery div.container.tablet div.site a:nth-of-type(3) {
-	display: none;
-}
-
-section.gallery div.container.mobile div.site a:nth-of-type(3) {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+section.gallery div.container.mobile div.site a {
 	padding-top: 70px;
 	background-image: url(../images/phone-frame.svg);
-	background-repeat: no-repeat;
-	background-position: center top;
 	background-size: 382px 670px;
 	width: 382px;
 	height: 670px;
-	position: relative;
-	overflow: hidden;
 }
 
-img.loading {
+section.gallery div.container.desktop div.site img:nth-of-type(1),
+section.gallery div.container.tablet div.site img:nth-of-type(2),
+section.gallery div.container.mobile div.site img:nth-of-type(3) {
+	display: inline-block;
+}
+
+section.gallery div.site img.loading {
 	position: relative;
 	top: 200px;
 }
@@ -585,7 +562,6 @@ div.testimonials div.testimonial svg {
 	display: block;
 	padding-bottom: 50px;
     -webkit-transform: translateZ(0);
-
 }
 
 div.testimonials div.testimonial div.description {
@@ -609,65 +585,175 @@ div.testimonials div.testimonial div.description p {
 
 div.testimonial:nth-of-type(1) svg polygon:nth-of-type(1) {
     -webkit-transform: translate(0px,0px);
+    -webkit-animation: move 8s linear infinite;
     transform: translate(0px,0px);
     animation: move 10s linear infinite;
-    -webkit-animation: move 8s linear infinite;
 }
 
 div.testimonial:nth-of-type(1) svg polygon:nth-child(2) {
     -webkit-transform: translate(0px,0px);
+    -webkit-animation: move 10s linear infinite;
     transform: translate(0px,0px);
     animation: move 10s linear infinite;
-    -webkit-animation: move 10s linear infinite;
 }
 
 div.testimonial:nth-of-type(2) svg polygon:nth-of-type(1) {
-    -webkit-transform: translate(0px,0px);
     transform: translate(0px,0px);
     animation: move 10s linear infinite;
-    -webkit-animation: move 4s linear infinite;
     animation-delay: 0.8s;
+    -webkit-transform: translate(0px,0px);
+    -webkit-animation: move 4s linear infinite;
     -webkit-animation-delay: 0.8s;
 }
 
 div.testimonial:nth-of-type(2) svg polygon:nth-child(2) {
-    -webkit-transform: translate(0px,0px);
     transform: translate(0px,0px);
     animation: move 10s linear infinite;
-    -webkit-animation: move 7s linear infinite;
     animation-delay: 0.7s;
+    -webkit-transform: translate(0px,0px);
+    -webkit-animation: move 7s linear infinite;
     -webkit-animation-delay: 0.7s;
 }
 
 div.testimonial:nth-of-type(3) svg polygon:nth-of-type(1) {
-    -webkit-transform: translate(0px,0px);
     transform: translate(0px,0px);
     animation: move 10s linear infinite;
-    -webkit-animation: move 6s linear infinite;
     animation-delay: 1s;
+    -webkit-transform: translate(0px,0px);
+    -webkit-animation: move 6s linear infinite;
     -webkit-animation-delay: 1s;
 }
 
 div.testimonial:nth-of-type(3) svg polygon:nth-child(2) {
-    -webkit-transform: translate(0px,0px);
     transform: translate(0px,0px);
     animation: move 10s linear infinite;
-    -webkit-animation: move 4s linear infinite;
     animation-delay: 1.7s;
+    -webkit-transform: translate(0px,0px);
+    -webkit-animation: move 4s linear infinite;
     -webkit-animation-delay: 1.7s;
 }
 
 @keyframes move {
-    0% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px);}
-    50% {-webkit-transform: translate(-20px,40px);transform: translate(-20px,40px);}
-    80% {-webkit-transform: translate(0px,20px);transform: translate(0px,20px);}
-    100% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px);}
+	0% {
+		-webkit-transform: translate(0px,0px);
+		transform: translate(0px,0px);
+	}
+	50% {
+		-webkit-transform: translate(-20px,40px);
+		transform: translate(-20px,40px);
+	}
+	80% {
+		-webkit-transform: translate(0px,20px);
+		transform: translate(0px,20px);
+	}
+	100% {
+		-webkit-transform: translate(0px,0px);
+		transform: translate(0px,0px);
+	}
 }
 
 @-webkit-keyframes move {
-    0% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px);}
-    50% {-webkit-transform: translate(-20px,40px);transform: translate(-20px,40px);}
-    80% {-webkit-transform: translate(0px,20px);transform: translate(0px,20px);}
-    100% {-webkit-transform: translate(0px,0px);transform: translate(0px,0px)};
+	0% {
+		-webkit-transform: translate(0px,0px);
+		transform: translate(0px,0px);
+	}
+	50% {
+		-webkit-transform: translate(-20px,40px);
+		transform: translate(-20px,40px);
+	}
+	80% {
+		-webkit-transform: translate(0px,20px);
+		transform: translate(0px,20px);
+	}
+	100% {
+		-webkit-transform: translate(0px,0px);
+		transform: translate(0px,0px);
+	}
 }
 
+/**
+ * Site preview
+ */
+div#preview {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+
+	text-align: center;
+
+	visibility: hidden;
+	opacity: 0;
+	z-index: 100002;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+div#preview.visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+div#preview.loading:after {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+}
+
+div#preview div.controls {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
+body.rtl div#preview div.controls {
+	right: auto;
+	left: 20px;
+}
+
+div#preview div.controls a {
+	display: inline-block;
+	width: 1em;
+	padding: 0.5em;
+
+	background-color: white;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
+	color: white;
+	line-height: 100%;
+}
+
+div#preview div.controls a.desktop {
+	border-radius: 5px 0px 0px 5px;
+}
+
+div#preview div.controls a.mobile {
+	border-radius: 0px 5px 5px 0px;
+}
+
+div#preview div.controls a.close {
+	margin-left: 10px;
+	border-radius: 5px;
+}
+
+body.rtl div#preview div.controls a.desktop {
+	border-radius: 0px 5px 5px 0px;
+}
+
+body.rtl div#preview div.controls a.mobile {
+	border-radius: 5px 0px 0px 5px;
+}
+
+body.rtl div#preview div.controls a.close {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+div#preview div.controls a svg {
+	width: 50px;
+	height: 50px;
+}

@@ -7,5 +7,5 @@
 			template="parts/article_features.xml"
 			cms:eval="group"
 			/>
-	</ul>	
+	</ul>
 </document>

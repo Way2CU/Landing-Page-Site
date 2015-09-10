@@ -286,16 +286,17 @@ section.gallery  div.controls a svg {
 	transition: all 0.3s;
 }
 
-section.gallery  div.controls svg path {
+section.gallery  div.controls svg {
 	transition: all 0.3s;
+	stroke: #7f8c8d;
+	stroke-width: 1%;
+	stroke-miterlimit: 10;
+	fill: none;
 }
 
-section.gallery div.controls a:hover svg path {
-	fill: #00b4c0;
-}
-
-section.gallery div.controls a.active svg path {
-	fill: #00b4c0;
+section.gallery div.controls a:hover svg,
+section.gallery div.controls a.active svg {
+	stroke: #00b4c0;
 }
 
 section.gallery  > a.next {
@@ -674,86 +675,62 @@ div.testimonial:nth-of-type(3) svg polygon:nth-child(2) {
 /**
  * Site preview
  */
-div#preview {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-
-	text-align: center;
-
-	visibility: hidden;
-	opacity: 0;
-	z-index: 100002;
-	overflow-y: scroll;
+body#preview {
+	background-color: #303030;
 	overflow-x: hidden;
+	text-align: center;
 }
 
-div#preview.visible {
-	visibility: visible;
-	opacity: 1;
-}
-
-div#preview.loading:after {
+body#preview.loading:after {
 	position: absolute;
 	top: 50px;
 	left: 50%;
-	width: 100px;
-	height: 100px;
-	margin-left: -50px;
+	width: 70px;
+	height: 70px;
+	margin-left: -35px;
+	content: '';
+
+	border: 1px solid #d0d0d0;
+	border-radius: 50%;
+	background-color: white;
+	background-image: url(../images/loading.gif);
+	background-position: 40% 40%;
+	background-repeat: no-repeat;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
-div#preview div.controls {
+body#preview div.controls {
 	position: fixed;
 	top: 20px;
 	right: 20px;
+
+	border: 1px solid #d0d0d0;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
-body.rtl div#preview div.controls {
+body#preview.rtl div.controls {
 	right: auto;
 	left: 20px;
 }
 
-div#preview div.controls a {
+body#preview div.controls a {
 	display: inline-block;
-	width: 1em;
 	padding: 0.5em;
-
-	background-color: white;
-	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-
-	color: white;
 	line-height: 100%;
 }
 
-div#preview div.controls a.desktop {
-	border-radius: 5px 0px 0px 5px;
+body#preview div.controls a svg {
+	height: 60px;
+	width: 60px;
+
+	stroke: #7f8c8d;
+	stroke-width: 1.5%;
+	stroke-miterlimit: 10;
+	fill: none;
 }
 
-div#preview div.controls a.mobile {
-	border-radius: 0px 5px 5px 0px;
-}
-
-div#preview div.controls a.close {
-	margin-left: 10px;
-	border-radius: 5px;
-}
-
-body.rtl div#preview div.controls a.desktop {
-	border-radius: 0px 5px 5px 0px;
-}
-
-body.rtl div#preview div.controls a.mobile {
-	border-radius: 5px 0px 0px 5px;
-}
-
-body.rtl div#preview div.controls a.close {
-	margin-left: 0px;
-	margin-right: 10px;
-}
-
-div#preview div.controls a svg {
-	width: 50px;
-	height: 50px;
+body#preview div.controls a.active svg {
+	stroke: #00b5c1;
 }

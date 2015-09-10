@@ -100,7 +100,7 @@
 					template="parts/article_group.xml"
 					/>
 			</section>
-			
+
 			<cms:desktop>
 				<section class="gallery">
 					<h2><cms:text constant="gallery_title"/></h2>
@@ -113,14 +113,33 @@
 							/>
 					</div>
 					<div class="controls">
-						<a href="javascript:void(0)" class="desktop">
-							<cms:svg file="../images/desktop-icon.svg"/>
+						<cms:svg file="preview-sprite.svg"/>
+						<a href="javascript: void(0);" class="desktop" data-version="desktop">
+							<svg>
+								<use
+									href="#desktop-icon"
+									xlink:href="_BASEURL.'/site/images/preview-sprite.svg#desktop-icon'"
+									cms:eval="xlink:href"
+									/>
+							</svg>
 						</a>
-						<a href="javascript:void(0)" class="tablet">
-							<cms:svg file="../images/tablet-icon.svg"/>
+						<a href="javascript: void(0);" class="tablet" data-version="tablet">
+							<svg>
+								<use
+									href="#tablet-icon"
+									xlink:href="_BASEURL.'/site/images/preview-sprite.svg#tablet-icon'"
+									cms:eval="xlink:href"
+									/>
+							</svg>
 						</a>
-						<a href="javascript:void(0)" class="mobile">
-							<cms:svg file="../images/mobile-icon.svg"/>
+						<a href="javascript: void(0);" class="mobile" data-version="mobile">
+							<svg>
+								<use
+									href="#mobile-icon"
+									xlink:href="_BASEURL.'/site/images/preview-sprite.svg#mobile-icon'"
+									cms:eval="xlink:href"
+									/>
+							</svg>
 						</a>
 					</div>
 					<a href="javascript:void(0)" class="next"></a>
@@ -142,8 +161,7 @@
 					<a href="javascript:void(0)" class="btn_next"></a>
 				</div>
 
-					<h2><cms:text constant="clients"/></h2>
-
+				<h2><cms:text constant="clients"/></h2>
 
 				<div class="testimonials">
 					<cms:module
@@ -151,10 +169,8 @@
 						action="show_group"
 						text_id="testimonials"
 						template="parts/testimonials_group.xml"
-					/>
+						/>
 				</div>
-
-
 			</section>
 
 			<footer>
@@ -166,11 +182,10 @@
 						template="parts/article_footer.xml"
 						/>
 				</section>
-			<div class="copyright">
-				<span><cms:text constant="copyright"/></span>
-			</div>
+				<div class="copyright">
+					<span><cms:text constant="copyright"/></span>
+				</div>
 			</footer>
-				
 		</body>
 	</html>
 </document>

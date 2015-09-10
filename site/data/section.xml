@@ -4,4 +4,7 @@
 	<section name="home">
 		<language name="all" file="home.xml" />
 	</section>
+	<section name="preview">
+		<language name="all" file="preview.xml" />
+	</section>
 </document>

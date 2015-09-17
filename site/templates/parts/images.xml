@@ -2,7 +2,7 @@
 	<cms:if condition="$params['text_id'] == 'desktop'">
 		<img
 			src="site/images/loading.gif"
-			data-image="gallery::getThumbnailById($params['id'], null, 920, Thumbnail::CONSTRAIN_HEIGHT)"
+			data-image="gallery::getThumbnailById($params['id'], null, 920, Thumbnail::CONSTRAIN_HEIGHT, 615)"
 			class="loading"
 			alt="$params['title'][$language]"
 			cms:eval="data-image,alt"
@@ -12,7 +12,7 @@
 	<cms:if condition="$params['text_id'] == 'tablet'">
 		<img
 			src="site/images/loading.gif"
-			data-image="gallery::getThumbnailById($params['id'], null, 375, Thumbnail::CONSTRAIN_HEIGHT)"
+			data-image="gallery::getThumbnailById($params['id'], null, 375, Thumbnail::CONSTRAIN_HEIGHT, 480)"
 			class="loading"
 			alt="$params['title'][$language]"
 			cms:eval="data-image,alt"
@@ -22,7 +22,7 @@
 	<cms:if condition="$params['text_id'] == 'mobile'">
 		<img
 			src="site/images/loading.gif"
-			data-image="gallery::getThumbnailById($params['id'], null, 320, Thumbnail::CONSTRAIN_HEIGHT)"
+			data-image="gallery::getThumbnailById($params['id'], null, 320, Thumbnail::CONSTRAIN_HEIGHT, 500)"
 			class="loading"
 			alt="$params['title'][$language]"
 			cms:eval="data-image,alt"

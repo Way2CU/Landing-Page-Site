@@ -257,8 +257,13 @@ Site.LandingPagePreview = function(page_control, controls_container) {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
+	// this should work only on home page
+	if (window.location.pathname != '/')
+		return;
+
 	if (Site.is_mobile()) {
 		Site.mobile_menu = new Caracal.MobileMenu();
+
 	// create slider for client logo gallery
 	 Site.client_logo_slider_mobile = new Caracal.Gallery.Slider();
 	 Site.client_logo_slider_mobile

@@ -1,10 +1,10 @@
 ---
 site:
-  domain: sample.com
-  # subdomain: test
+  domain: way2cu.com
+  subdomain: lp
   make_alias: false
-  root: httpdocs
-  username: "sample"
+  root: landing_page
+  username: twigy
   caracal_branch: develop
   # ip_address: 0.0.0.0
   # owner: Some Person

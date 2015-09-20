@@ -1,7 +1,7 @@
 ---
 - name: Creating new subscription
   command: "{{ plesk_subscription }}
-      --create {{ site.domain }}
+      --create '{{ site.domain }}'
       -owner '{{ site.owner | default(default_owner) }}'
       -service_plan '{{ site.plan | default(default_plan) }}'
       -ip {{ site.ip_address | default(default_ip_address) }}
@@ -10,6 +10,17 @@
   args:
     chdir: "{{ plesk_command_directory }}"
     creates: "{{ subscription_directory }}"
+
+- name: Creating subdomain
+  command: "{{ plesk_subdomain }}
+      --create {{ site.subdomain }}
+      -domain '{{ site.domain }}'
+      -www-root '{{ site.root }}'
+      -php true"
+  args:
+    chdir: "{{ plesk_command_directory }}"
+    creates: "{{ site_directory }}"
+  when: site.subdomain is defined
 
 - name: Creating domain alias
   command: "{{ plesk_alias }}

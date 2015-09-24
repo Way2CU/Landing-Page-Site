@@ -278,55 +278,58 @@ Site.on_load = function() {
 	}
 
 	if (!Site.is_mobile()){
+		// create desktop screen shot slider in header
+		var timeout = 4000;
+		Site.desktop_screenshot_slider = new Caracal.Gallery.Slider();
+		Site.desktop_screenshot_slider
+			.images.set_container('div.figures figure')
+			.images.set_visible_count(1)
+			.images.add('div.figures img.desktop')
+			.controls.set_pause_on_hover(false)
+			.controls.set_auto(timeout);
+		Site.desktop_screenshot_slider.images.update();
 
-	// create desktop screen shot slider in header
-	var timeout = 4000;
-	Site.desktop_screenshot_slider = new Caracal.Gallery.Slider();
-	Site.desktop_screenshot_slider
-		.images.set_container('div.figures figure')
-		.images.set_visible_count(1)
-		.images.add('div.figures img.desktop')
-		.controls.set_pause_on_hover(false)
-		.controls.set_auto(timeout);
-	Site.desktop_screenshot_slider.images.update();
+		// create mobile screen shot slider in header
+		Site.mobile_screenshot_slider = new Caracal.Gallery.Slider();
+		Site.mobile_screenshot_slider
+			.images.set_container('div.figures div.phone')
+			.images.set_visible_count(1)
+			.images.add('div.figures img.mobile')
+		Site.mobile_screenshot_slider.images.update();
 
-	// create mobile screen shot slider in header
-	Site.mobile_screenshot_slider = new Caracal.Gallery.Slider();
-	Site.mobile_screenshot_slider
-		.images.set_container('div.figures div.phone')
-		.images.set_visible_count(1)
-		.images.add('div.figures img.mobile')
-		.controls.set_pause_on_hover(false)
-		.controls.set_auto(timeout);
-	Site.mobile_screenshot_slider.images.update();
+		// switch page on desktop signal
+		Site.desktop_screenshot_slider.connect('page-flip', function(old_page, new_page) {
+				Site.mobile_screenshot_slider.nextPage();
+				return true;
+			});
 
-	// create slider for client logo gallery
-	 Site.client_logo_slider = new Caracal.Gallery.Slider();
-	 Site.client_logo_slider
-		.images.set_container('div.client_gallery')
-		.images.set_visible_count(6)
-		.images.set_step_size(1)
-		.images.set_center(true)
-		.images.add('div.client_gallery img')
-		.controls.attach_next('div.clients_gallery_wrap a.btn_next')
-		.controls.attach_previous('div.clients_gallery_wrap a.btn_previous');
-	 Site.client_logo_slider.images.update();
+		// create slider for client logo gallery
+		Site.client_logo_slider = new Caracal.Gallery.Slider();
+		Site.client_logo_slider
+			.images.set_container('div.client_gallery')
+			.images.set_visible_count(6)
+			.images.set_step_size(1)
+			.images.set_center(true)
+			.images.add('div.client_gallery img')
+			.controls.attach_next('div.clients_gallery_wrap a.btn_next')
+			.controls.attach_previous('div.clients_gallery_wrap a.btn_previous');
+		Site.client_logo_slider.images.update();
 
-	// create page control for landing page preview
-	Site.landing_pages_gallery = new PageControl('section.gallery div.container', 'div.site');
-	Site.landing_pages_gallery
-		.attachPreviousControl($('section.gallery a.previous'))
-		.attachNextControl($('section.gallery a.next'))
-		.setWrapAround(true);
+		// create page control for landing page preview
+		Site.landing_pages_gallery = new PageControl('section.gallery div.container', 'div.site');
+		Site.landing_pages_gallery
+			.attachPreviousControl($('section.gallery a.previous'))
+			.attachNextControl($('section.gallery a.next'))
+			.setWrapAround(true);
 
-	// create fixed position menu
-	Site.menu = new FloatingMenu($('div.menu'), $('section.about'));
+		// create fixed position menu
+		Site.menu = new FloatingMenu($('div.menu'), $('section.about'));
 
-	// create landing page preview
-	Site.landing_page_preview = new Site.LandingPagePreview(
-			Site.landing_pages_gallery,
-			$('section.gallery div.controls')
-		);
+		// create landing page preview
+		Site.landing_page_preview = new Site.LandingPagePreview(
+				Site.landing_pages_gallery,
+				$('section.gallery div.controls')
+			);
 	}
 };
 

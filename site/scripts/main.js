@@ -297,11 +297,11 @@ Site.on_load = function() {
 			.images.add('div.figures img.mobile')
 		Site.mobile_screenshot_slider.images.update();
 
-		// switch page on desktop signal
-		Site.desktop_screenshot_slider.connect('page-flip', function(old_page, new_page) {
-				Site.mobile_screenshot_slider.nextPage();
-				return true;
-			});
+		 //switch page on desktop signal
+		 Site.desktop_screenshot_slider.connect('page-flip', function(old_page, new_page) {
+		 		Site.mobile_screenshot_slider.nextPage();
+		 		return true;
+		 	});
 
 		// create slider for client logo gallery
 		Site.client_logo_slider = new Caracal.Gallery.Slider();

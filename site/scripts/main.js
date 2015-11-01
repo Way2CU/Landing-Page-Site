@@ -148,7 +148,7 @@ Site.LandingPagePreview = function(page_control, controls_container) {
 		self.controls.on('click', self.handler.version_click);
 
 		// load first image
-		self._load_image(null);
+		self._load_image(0);
 		self._apply_control_visibility(null);
 	};
 

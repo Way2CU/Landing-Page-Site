@@ -9,35 +9,65 @@
 
 @keyframes changeImage {
 	0% { opacity: 0 }
-	5%, 15% { opacity: 1 }
-	15%, 20% { opacity: 0 }
+	5%, 35% { opacity: 1 }
+	40% { opacity: 0 }
 }
 
 @-webkit-keyframes changeImage {
 	0% { opacity: 0 }
-	5%, 15% { opacity: 1 }
-	20%, 22% { opacity: 0 }
+	5%, 35% { opacity: 1 }
+	40% { opacity: 0 }
 }
 
 @-moz-keyframes changeImage {
 	0% { opacity: 0 }
-	5%, 15% { opacity: 1 }
-	20%, 22% { opacity: 0 }
+	5%, 35% { opacity: 1 }
+	40% { opacity: 0 }
 }
 
 @keyframes changeCircleColor {
-	0% { background-color: #00b4c0; }
-	10% { background-color: #bcc2c6; }
+	0% {
+		background-color: #bcc2c6;
+		transform: scale(1);
+	}
+	5% {
+		background-color: #00b4c0;
+		transform: scale(1.2);
+	}
+	13% {
+		background-color: #bcc2c6;
+		transform: scale(1);
+	}
 }
 
 @-webkit-keyframes changeCircleColor {
-	0% { background-color: #00b4c0; }
-	10% { background-color: #bcc2c6; }
+	0% {
+		background-color: #bcc2c6;
+		transform: scale(1);
+	}
+	5% {
+		background-color: #00b4c0;
+		transform: scale(1.2);
+	}
+	13% {
+		background-color: #bcc2c6;
+		transform: scale(1);
+	}
 }
 
 @-moz-keyframes changeCircleColor {
-	0% { background-color: #00b4c0; }
-	10% { background-color: #bcc2c6; }
+	0% {
+		background-color: #bcc2c6;
+		transform: scale(1);
+	}
+	5% {
+		background-color: #00b4c0;
+		transform: scale(1.2);
+	}
+	13% {
+		background-color: #bcc2c6;
+		transform: scale(1);
+	}
 }
 
 section.about {

@@ -9,6 +9,7 @@ site:
   # ip_address: 0.0.0.0
   # owner: Some Person
   # plan: Unlimited
+  # database_type: 'mysql'
 
 local_site_directory: ../site
 subscription_directory: "{{ plesk_vhost_directory }}/{{ site.domain }}"

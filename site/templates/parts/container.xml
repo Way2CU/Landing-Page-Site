@@ -12,7 +12,24 @@
 			>
 			<cms:module
 				name="gallery"
-				action="show_image_list"
+				action="show_image"
+				text_id="desktop"
+				group_id="$params['id']"
+				template="parts/images.xml"
+				cms:eval="group_id"
+				/>
+			<cms:module
+				name="gallery"
+				action="show_image"
+				text_id="tablet"
+				group_id="$params['id']"
+				template="parts/images.xml"
+				cms:eval="group_id"
+				/>
+			<cms:module
+				name="gallery"
+				action="show_image"
+				text_id="mobile"
 				group_id="$params['id']"
 				template="parts/images.xml"
 				cms:eval="group_id"

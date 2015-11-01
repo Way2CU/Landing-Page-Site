@@ -286,7 +286,6 @@ Site.on_load = function() {
 			.images.set_visible_count(1)
 			.images.add('div.figures img.desktop')
 			.controls.set_pause_on_hover(false)
-			.controls.set_auto(timeout);
 		Site.desktop_screenshot_slider.images.update();
 
 		// create mobile screen shot slider in header
@@ -295,13 +294,15 @@ Site.on_load = function() {
 			.images.set_container('div.figures div.phone')
 			.images.set_visible_count(1)
 			.images.add('div.figures img.mobile')
+			.controls.set_pause_on_hover(false)
 		Site.mobile_screenshot_slider.images.update();
 
-		 //switch page on desktop signal
-		 Site.desktop_screenshot_slider.connect('page-flip', function(old_page, new_page) {
-		 		Site.mobile_screenshot_slider.nextPage();
-		 		return true;
-		 	});
+		// switch page on desktop signal
+		setInterval(function(event) {
+				Site.desktop_screenshot_slider.next_step();
+				Site.mobile_screenshot_slider.next_step();
+			}, timeout);
+
 
 		// create slider for client logo gallery
 		Site.client_logo_slider = new Caracal.Gallery.Slider();

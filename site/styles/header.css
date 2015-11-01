@@ -6,6 +6,21 @@
  * Authors:Tal Reznic
  */
 
+@-webkit-keyframes arrowMove {
+    from { right: 120%; }
+    to { right:110%; }
+}
+
+@-moz-keyframes arrowMove {
+    from { right: 120%; }
+    to { right:110%; }
+}
+
+@keyframes arrowMove {
+    from { right: 120%; }
+    to { right:110%; }
+}
+
 header {
     display: block;
     text-align: center;
@@ -26,7 +41,7 @@ div.menu {
     width: 100%;
     transition:all 0.3s;
 	-webkit-transform: translateZ(0);
-	transform: translateZ(0);	    
+	transform: translateZ(0);
  }
 
 div.menu.active {
@@ -35,7 +50,7 @@ div.menu.active {
 	background-color: white;
 	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 
-} 
+}
 
 div.menu div.menu_container {
     display: table;
@@ -46,7 +61,7 @@ div.menu div.menu_container {
     padding-bottom: 10px;
     width: 1200px;
 
-} 
+}
 
 div.menu_container a.logo {
 	display: table-cell;
@@ -68,12 +83,12 @@ div.menu_container form {
 }
 
 div.menu_container form label input {
-	background-color: rgba(255, 255, 255, 0.2);	
+	background-color: rgba(255, 255, 255, 0.2);
 	transition:all 0.3s;
 }
 
 div.menu_container form label input:hover {
-	background-color: rgba(255, 255, 255, 0.6);	
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
 div.menu_container form label input:focus {
@@ -108,7 +123,7 @@ div.menu_container a.phone svg {
 
 div.menu_container a.phone svg path {
 	fill:#33485d;
-	transition:all 0.3s;	
+	transition:all 0.3s;
 }
 
 div.menu_container a.phone:hover svg path{
@@ -151,7 +166,7 @@ header article a.phone {
     box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.33);
 	background: -webkit-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
 	background: -o-linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
-	background: linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);   
+	background: linear-gradient(#2ecc71 0%, #27ae60 92%, #2ecc71 100%);
     position: relative;
     z-index: 1;
 }
@@ -169,7 +184,7 @@ header article a.phone:before {
 	background: linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
     z-index: -1;
     transition:all 0.3s;
-    opacity: 0;	
+    opacity: 0;
 }
 
 header article a.phone:hover:before {
@@ -209,7 +224,7 @@ header div.figures figure {
 	height: 270px;
 	border-radius: 3px;
 	position: relative;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 header div.figures figure img {
@@ -244,7 +259,7 @@ header div.figures div.phone img {
     top: 20px;
     right:33px !important;
 	opacity:0;
-	transition:all 0.8s;    	
+	transition:all 0.8s;
 }
 
 header div.figures div.phone img.visible {
@@ -312,7 +327,7 @@ form label input {
 }
 
 form label input:hover {
-	background-color: rgba(255, 255, 255, 0.6);	
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
 form label input:focus {
@@ -321,12 +336,12 @@ form label input:focus {
 
 form div.controls {
 	display: inline-block;
-	vertical-align: middle; 
-	position: relative;      	
+	vertical-align: middle;
+	position: relative;
 }
 
 form div.controls button {
-    -webkit-transform: translateZ(0);	
+    -webkit-transform: translateZ(0);
 }
 
 header div.form_wrap form div.controls:before {
@@ -351,19 +366,8 @@ header div.form_wrap form div.controls:before {
 	    -ms-transform: rotate(270deg);
 	     -o-transform: rotate(270deg);
 	        transform: rotate(270deg);
-	-webkit-animation: arrowMove 0.7s linear infinite alternate; 
-	-moz-animation: arrowMove 0.7s linear infinite alternate;	       
-}
-
-/* Chrome, Safari, Opera */ 
-@-webkit-keyframes arrowMove {
-    from {right: 120%; }
-    to {right:110%;}
-}
-
-@-moz-keyframes arrowMove {
-    from {right: 120%; }
-    to {right:110%;}
+	-webkit-animation: arrowMove 0.7s linear infinite alternate;
+	-moz-animation: arrowMove 0.7s linear infinite alternate;
 }
 
 form div.controls button {
@@ -381,8 +385,8 @@ form div.controls button {
     z-index: 1;
     cursor: pointer;
     position: relative;
-    transition: all 0.2s;  
-      	
+    transition: all 0.2s;
+
 }
 
 form div.controls button:before {
@@ -398,7 +402,7 @@ form div.controls button:before {
 	background: linear-gradient(#2ecc71 0%, #27ae60 8%, #2ecc71 100%);
     z-index: -1;
     transition:all 0.3s;
-    opacity: 0;	
+    opacity: 0;
 }
 
 form div.controls button:hover:before {

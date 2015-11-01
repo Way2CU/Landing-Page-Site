@@ -6,6 +6,40 @@
  * Authors: Tal Reznic, Mladen Mijatov
  */
 
+
+@keyframes changeImage {
+	0% { opacity: 0 }
+	5%, 15% { opacity: 1 }
+	15%, 20% { opacity: 0 }
+}
+
+@-webkit-keyframes changeImage {
+	0% { opacity: 0 }
+	5%, 15% { opacity: 1 }
+	20%, 22% { opacity: 0 }
+}
+
+@-moz-keyframes changeImage {
+	0% { opacity: 0 }
+	5%, 15% { opacity: 1 }
+	20%, 22% { opacity: 0 }
+}
+
+@keyframes changeCircleColor {
+	0% { background-color: #00b4c0; }
+	10% { background-color: #bcc2c6; }
+}
+
+@-webkit-keyframes changeCircleColor {
+	0% { background-color: #00b4c0; }
+	10% { background-color: #bcc2c6; }
+}
+
+@-moz-keyframes changeCircleColor {
+	0% { background-color: #00b4c0; }
+	10% { background-color: #bcc2c6; }
+}
+
 section.about {
  	display: block;
  	text-align: center;
@@ -138,21 +172,6 @@ section.about ul li:nth-of-type(3):after {
     animation: changeCircleColor 15s 8s infinite;
 }
 
-@keyframes changeCircleColor {
-	0% { background-color: #00b4c0;}
-	5% { background-color: #bcc2c6;}
-}
-
-@-webkit-keyframes changeCircleColor {
-	0% { background-color: #00b4c0;}
-	5% { background-color: #bcc2c6;}
-}
-
-@-moz-keyframes changeCircleColor {
-	0% { background-color: #00b4c0;}
-	5% { background-color: #bcc2c6;}
-}
-
 section.about ul li h3 {
 	display: block;
 	padding-bottom: 5px;
@@ -225,24 +244,6 @@ section.about ul li:nth-of-type(3) h3:after {
     -webkit-animation: changeImage 15s 10s infinite;
     -moz-animation: changeImage 15s 10s infinite;
     animation: changeImage 15s 10s infinite;
-}
-
-@keyframes changeImage {
-	0% { opacity: 0 }
-	5%, 15% { opacity: 1 }
-	15%, 20% { opacity: 0 }
-}
-
-@-webkit-keyframes changeImage {
-	0% { opacity: 0 }
-	5%, 15% { opacity: 1 }
-	20%, 22% { opacity: 0 }
-}
-
-@-moz-keyframes changeImage {
-	0% { opacity: 0 }
-	5%, 15% { opacity: 1 }
-	20%, 22% { opacity: 0 }
 }
 
 section.gallery {

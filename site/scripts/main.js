@@ -303,6 +303,7 @@ Site.on_load = function() {
 				Site.mobile_screenshot_slider.next_step();
 			}, timeout);
 
+
 		// create slider for client logo gallery
 		Site.client_logo_slider = new Caracal.Gallery.Slider();
 		Site.client_logo_slider

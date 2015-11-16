@@ -16,9 +16,8 @@ footer section {
 	background-image: url(../images/footer.jpg);
 	background-repeat: no-repeat;
 	background-position: center top;
-    background-size: 1920px 1000px;	
-	background-attachment: fixed;
-	min-height: 600px;
+    	background-size: 1920px 1000px;	
+	min-height: 1000px;
 	position: relative;	
 }
 
